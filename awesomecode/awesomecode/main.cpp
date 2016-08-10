@@ -63,10 +63,33 @@ void bubble_sort_2(int array[], int n)
     }
 }
 
+/**
+ * 改进的冒泡排序
+ * 如果待排序数组恰好后半部分已经有序，且都大于前面部分的数据，
+ * 那么一趟遍历后，最后交换的位置一定小于临界点，且后面已经有序，
+ * 记录下这个位置，后面只需要从头部遍历到这个位置就可以
+ */
+void bubble_sort_3(int array[], int n)
+{
+    int k = n, j;
+    int flag = n;
+    
+    while (flag > 0) {
+        k = flag;
+        flag = 0;
+        for (j = 1; j < k; ++j) {
+            if (array[j - 1] > array[j]) {
+                myswap(array[j - 1], array[j]);
+                flag = j;
+            }
+        }
+    }
+}
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
-    bubble_sort_2(a, 10);
+    bubble_sort_3(a, 10);
     
     myprint(a, 10);
     
