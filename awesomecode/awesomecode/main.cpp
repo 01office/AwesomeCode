@@ -103,10 +103,24 @@ void insert_sort_1(int arr[], int n)
     }
 }
 
+/**
+ * 改进的插入排序
+ * arr[i] 插入到前面的有序序列中时，采用交换替代移动
+ */
+void insert_sort_2(int arr[], int n)
+{
+    int i, j;
+    for (i = 1; i < n; ++i) {
+        for (j = i - 1; j >= 0 && arr[j] > arr[j + 1]; --j) {
+            myswap(arr[j], arr[j + 1]);
+        }
+    }
+}
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
-    insert_sort_1(a, 10);
+    insert_sort_2(a, 10);
     
     myprint(a, 10);
     
