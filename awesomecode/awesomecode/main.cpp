@@ -86,10 +86,27 @@ void bubble_sort_3(int array[], int n)
     }
 }
 
+/**
+ * 插入排序
+ */
+void insert_sort_1(int arr[], int n)
+{
+    int i, j;
+    for (i = 1; i < n; ++i) {
+        if (arr[i - 1] > arr[i]) {
+            int tmp = arr[i];
+            for (j = i - 1; j >= 0 && arr[j] > tmp; --j) {
+                arr[j + 1] = arr[j];
+            }
+            arr[j + 1] = tmp;
+        }
+    }
+}
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
-    bubble_sort_3(a, 10);
+    insert_sort_1(a, 10);
     
     myprint(a, 10);
     
