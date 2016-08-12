@@ -117,6 +117,11 @@ void insert_sort_2(int arr[], int n)
     }
 }
 
+/**
+ * 直接选择排序
+ * 选取无序部分中最小的放在有序的后面一个位置
+ */
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
