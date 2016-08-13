@@ -137,12 +137,74 @@ void select_sort_1(int arr[], int n)
     }
 }
 
+/**
+ * 字符串逆序
+ */
+char *str_r_1(const char *str)
+{
+    size_t len = strlen(str);
+    char *tmp = new char[len + 1];
+    strcpy(tmp, str);
+    
+    for (int i = 0; i < len / 2; ++i) {
+        char c = tmp[i];
+        tmp[i] = tmp[len - i - 1];
+        tmp[len - i - 1] = c;
+    }
+    
+    return tmp;
+}
+
+char *str_r_2(const char *str)  // 用指针代替下标访问
+{
+    char *tmp = new char[strlen(str) + 1];
+    strcpy(tmp, str);
+    char *ret = tmp;
+    
+    char *p = tmp + strlen(str) - 1;
+    while (p > tmp) {
+        char c = *tmp;
+        *tmp = *p;
+        *p = c;
+        
+        --p;
+        ++tmp;
+    }
+    
+    return ret;
+}
+
+char *str_r_3(const char *str)  // 不使用额外变量
+{
+    char *tmp = new char[strlen(str) + 1];
+    strcpy(tmp, str);
+    char *ret = tmp;
+    
+    char *p = tmp + strlen(str) - 1;
+    while (p > tmp) {
+//        *tmp ^= *p;
+//        *p ^= *tmp;
+//        *tmp ^= *p;
+        *tmp = *tmp + *p;
+        *p = *tmp - *p;
+        *tmp = *tmp - *p;
+        
+        --p;
+        ++tmp;
+    }
+    
+    return ret;
+}
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
     select_sort_1(a, 10);
     
     myprint(a, 10);
+    
+    char *str = "I am the one!";
+    cout << str_r_3(str) << endl;
     
     return 0;
 }
