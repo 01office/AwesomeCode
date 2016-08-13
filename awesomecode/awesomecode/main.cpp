@@ -121,11 +121,26 @@ void insert_sort_2(int arr[], int n)
  * 直接选择排序
  * 选取无序部分中最小的放在有序的后面一个位置
  */
+void select_sort_1(int arr[], int n)
+{
+    int i, j, minIndex;
+    for (i = 0; i < n; ++i) {
+        minIndex = i;
+        
+        for (j = i + 1; j < n; ++j) {
+            if (arr[j] < arr[i]) {
+                minIndex = j;
+            }
+        }
+        
+        myswap(arr[i], arr[minIndex]);
+    }
+}
 
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
-    insert_sort_2(a, 10);
+    select_sort_1(a, 10);
     
     myprint(a, 10);
     
