@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <sstream>
 using namespace std;
 
 void myswap(int &a, int &b)
@@ -205,6 +206,17 @@ int main(int argc, const char * argv[]) {
     
     char *str = "I am the one!";
     cout << str_r_3(str) << endl;
+    
+    int myint = 123;
+    stringstream ss;
+    ss << myint;
+    cout << ss.str() << endl;
+    
+    int myint1;
+    string mystr = "456";
+    stringstream ss1(mystr);
+    ss1 >> myint1;
+    cout << myint1 << endl;
     
     return 0;
 }
