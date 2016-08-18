@@ -8,6 +8,8 @@
 
 #include <iostream>
 #include <sstream>
+#include <string>
+#include <vector>
 using namespace std;
 
 void myswap(int &a, int &b)
@@ -197,6 +199,47 @@ char *str_r_3(const char *str)  // 不使用额外变量
     return ret;
 }
 
+/**
+ * 编辑距离
+ */
+class Solution_EditDis
+{
+public:
+    int minDistance(string str1, string str2)
+    {
+        int len1 = str1.size(), len2 = str2.size();
+        int i, j;
+        vector<vector<int> > dp(len1 + 1);
+        
+        for (i = 0; i <= len1; ++i) {
+            vector<int> tmp(len2 + 1, 0);
+            dp[i] = tmp;
+        }
+        
+        for (i = 1; i <= len1; ++i) {
+            dp[i][0] = i;
+        }
+        
+        for (j = 1; j <= len2; ++j) {
+            dp[0][j] = j;
+        }
+        
+        for (i = 1; i <= len1; ++i) {
+            for (j = 1; j <= len2; ++j) {
+                if (str1[i - 1] == str2[j - 1]) {
+                    dp[i][j] = dp[i - 1][j - 1];
+                }
+                else
+                {
+                    dp[i][j] = min(dp[i - 1][j - 1], min(dp[i - 1][j], dp[i][j - 1])) + 1;
+                }
+            }
+        }
+        
+        return dp[len1][len2];
+    }
+};
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
@@ -217,6 +260,10 @@ int main(int argc, const char * argv[]) {
     stringstream ss1(mystr);
     ss1 >> myint1;
     cout << myint1 << endl;
+    
+    string s1 = "abc", s2 = "def";
+    Solution_EditDis sed;
+    cout << sed.minDistance(s1, s2) << endl;
     
     return 0;
 }
