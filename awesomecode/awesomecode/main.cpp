@@ -240,6 +240,27 @@ public:
     }
 };
 
+/**
+ * 给定一个十进制整数N，统计1到N所有书中出现的“1”的个数
+ * N＝2，1、2中“1”的个数为1
+ * N＝12，1、2、3、4、5、6、7、8、9、10、11、12中“1”的个数为5
+ */
+int count_one_1(int N)
+{
+    int i, j;
+    int count = 0;
+    for (i = 0; i <= N; ++i) {
+        j = i;
+        while (j != 0) {
+            if (j % 10 == 1) {
+                ++count;
+            }
+            j /= 10;
+        }
+    }
+    return count;
+}
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
@@ -264,6 +285,8 @@ int main(int argc, const char * argv[]) {
     string s1 = "abc", s2 = "def";
     Solution_EditDis sed;
     cout << sed.minDistance(s1, s2) << endl;
+    
+    cout << count_one_1(12) << endl;
     
     return 0;
 }
