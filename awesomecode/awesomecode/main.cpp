@@ -261,6 +261,36 @@ int count_one_1(int N)
     return count;
 }
 
+int count_one_2(int N)
+{
+    int count = 0;
+    int i = 1;
+    int current = 0, before = 0, after = 0;
+    
+    while ((N / i) != 0) {
+        current = (N / i) % 10;
+        before = N / (i * 10);
+        after = N - (N / i) * i;
+        
+        if (current > 1)
+        {
+            count = count + (before + 1) * i;
+        }
+        else if (current == 0)
+        {
+            count = count + before * i;
+        }
+        else if (current == 1)
+        {
+            count = count + before * i + after + 1;
+        }
+        
+        i *= 10;
+    }
+    
+    return count;
+}
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
@@ -286,7 +316,7 @@ int main(int argc, const char * argv[]) {
     Solution_EditDis sed;
     cout << sed.minDistance(s1, s2) << endl;
     
-    cout << count_one_1(12) << endl;
+    cout << count_one_2(123) << endl;
     
     return 0;
 }
