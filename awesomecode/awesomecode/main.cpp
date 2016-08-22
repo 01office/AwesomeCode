@@ -261,7 +261,7 @@ int count_one_1(int N)
     return count;
 }
 
-int count_one_2(int N)
+int count_one_2(int N)  // 利用统计的方法
 {
     int count = 0;
     int i = 1;
