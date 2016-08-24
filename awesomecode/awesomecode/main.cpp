@@ -291,6 +291,11 @@ int count_one_2(int N)  // 利用统计的方法
     return count;
 }
 
+/**
+  * 快速排序
+  */
+void quick_sort(int arr[], int n);
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
