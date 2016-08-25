@@ -19,6 +19,15 @@ void myswap(int &a, int &b)
     b = temp;
 }
 
+inline void myswap1(int &a, int &b)
+{
+    if (a != b) {
+        a ^= b;
+        b ^= a;
+        a ^= b;
+    }
+}
+
 void myprint(int arr[], int n)
 {
     for (int index = 0; index < n; ++index) {
