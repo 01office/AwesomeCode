@@ -294,7 +294,31 @@ int count_one_2(int N)  // 利用统计的方法
 /**
   * 快速排序
   */
-void quick_sort(int arr[], int n);
+void quick_sort(int arr[], int l, int r)
+{
+    if (l < r) {
+        int i = l, j = r, tmp = arr[l];
+        while (i < j) {
+            while (i < j && arr[j] >= tmp) {
+                --j;
+            }
+            if (i < j) {
+                arr[i++] = arr[j];
+            }
+            
+            while (i < j && arr[i] < tmp) {
+                ++i;
+            }
+            if (i < j) {
+                arr[j--] = arr[i];
+            }
+        }
+        arr[i] = tmp;
+        
+        quick_sort(arr, l, i - 1);
+        quick_sort(arr, i + 1, r);
+    }
+}
 
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
@@ -322,6 +346,9 @@ int main(int argc, const char * argv[]) {
     cout << sed.minDistance(s1, s2) << endl;
     
     cout << count_one_2(123) << endl;
+    
+    quick_sort(a, 0, 9);
+    myprint(a, 10);
     
     return 0;
 }
