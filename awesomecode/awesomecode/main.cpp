@@ -247,6 +247,49 @@ public:
         
         return dp[len1][len2];
     }
+    
+    // recursive
+    int string_distance(string str1, int p1begin, int p1end, string str2, int p2begin, int p2end)
+    {
+        if (p1begin > p1end) {
+            if (p2begin > p2end) {
+                return 0;
+            }
+            else
+            {
+                return p2end - p2begin + 1;
+            }
+        }
+        if (p2begin > p2end) {
+            if (p1begin > p1end) {
+                return 0;
+            }
+            else
+            {
+                return p1end - p1begin + 1;
+            }
+        }
+        
+        if (str1[p1begin] == str2[p2begin]) {
+            return string_distance(str1, p1begin + 1, p1end, str2, p2begin + 1, p2end);
+        }
+        else
+        {
+            int d1 = string_distance(str1, p1begin + 1, p1end, str2, p2begin + 2, p2end);
+            int d2 = string_distance(str1, p1begin + 2, p1end, str2, p2begin + 1, p2end);
+            int d3 = string_distance(str1, p1begin + 2, p1end, str2, p2begin + 2, p2end);
+            return minValue(d1, d2, d3) + 1;
+        }
+    }
+    
+private:
+    /**
+     * 求三个数中的最小值
+     */
+    int minValue(int a, int b, int c)
+    {
+        return (a < b ? a : b) < c ? (a < b ? a : b) : c;
+    }
 };
 
 /**
@@ -353,6 +396,7 @@ int main(int argc, const char * argv[]) {
     string s1 = "abc", s2 = "def";
     Solution_EditDis sed;
     cout << sed.minDistance(s1, s2) << endl;
+    cout << sed.string_distance(s1, 0, 2, s2, 0, 2) << endl;
     
     cout << count_one_2(123) << endl;
     
