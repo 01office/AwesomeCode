@@ -372,6 +372,21 @@ void quick_sort(int arr[], int l, int r)
     }
 }
 
+/**
+ * 实现 sqrt
+ */
+#include "math.h"
+double my_sqrt(double N)
+{
+    double x = 1.0;
+    
+    while (fabs(x * x - N) > 0.00001) {
+        x = (x + N / x) / 2;
+    }
+    
+    return x;
+}
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
@@ -402,6 +417,8 @@ int main(int argc, const char * argv[]) {
     
     quick_sort(a, 0, 9);
     myprint(a, 10);
+    
+    cout << my_sqrt(15.0) << endl;
     
     return 0;
 }
