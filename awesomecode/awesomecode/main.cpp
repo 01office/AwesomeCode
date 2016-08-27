@@ -398,7 +398,7 @@ int main(int argc, const char * argv[]) {
     cout << sed.minDistance(s1, s2) << endl;
     cout << sed.string_distance(s1, 0, 2, s2, 0, 2) << endl;
     
-    cout << count_one_2(123) << endl;
+    cout << count_one_1(123) << endl;
     
     quick_sort(a, 0, 9);
     myprint(a, 10);
