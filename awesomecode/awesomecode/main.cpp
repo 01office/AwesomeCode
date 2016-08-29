@@ -387,6 +387,20 @@ double my_sqrt(double N)
     return x;
 }
 
+/**
+ * 回文字符串判断
+ */
+bool is_huiwen(string *str)
+{
+    int l = strlen(str);
+    for (int i = 0; i < l / 2; ++i) {
+        if (str[i] != str[l - i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
