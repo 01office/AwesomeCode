@@ -401,6 +401,10 @@ bool is_huiwen(string *str)
     return true;
 }
 
+/**
+ * Manacher
+ */
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
