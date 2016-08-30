@@ -10,7 +10,10 @@
 #define my_algor_hpp
 
 #include <string>
+#include <cmath>
 
 void manacher(std::string &str);
+
+double my_sqrt(double N);
 
 #endif /* my_algor_hpp */

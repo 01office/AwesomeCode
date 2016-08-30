@@ -376,21 +376,6 @@ void quick_sort(int arr[], int l, int r)
 }
 
 /**
- * 实现 sqrt
- */
-#include "math.h"
-double my_sqrt(double N)
-{
-    double x = 1.0;
-    
-    while (fabs(x * x - N) > 0.00001) {
-        x = (x + N / x) / 2;
-    }
-    
-    return x;
-}
-
-/**
  * 回文字符串判断
  */
 bool is_huiwen(string &str)

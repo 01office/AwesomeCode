@@ -53,3 +53,13 @@ void manacher(std::string &str)
     }
     std::cout << std::endl;
 }
+
+double my_sqrt(double N)
+{
+    double x = 1.0;
+    while (fabs(x * x - N) > 0.0001) {
+        x = (x + N / x) / 2;
+    }
+    
+    return x;
+}
