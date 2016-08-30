@@ -9,6 +9,8 @@
 #ifndef my_algor_hpp
 #define my_algor_hpp
 
-#include <stdio.h>
+#include <string>
+
+void manacher(std::string &str);
 
 #endif /* my_algor_hpp */

@@ -10,6 +10,9 @@
 #include <sstream>
 #include <string>
 #include <vector>
+
+#include "my_algor.hpp"
+
 using namespace std;
 
 void myswap(int &a, int &b)
@@ -433,6 +436,14 @@ int main(int argc, const char * argv[]) {
     myprint(a, 10);
     
     cout << my_sqrt(15.0) << endl;
+    
+    string huiwen = "12212332145";
+    string huiwen0 = "$#";
+    for (int i = 0; i < huiwen.size(); ++i) {
+        huiwen0 += huiwen[i];
+        huiwen0 += '#';
+    }
+    manacher(huiwen0);
     
     return 0;
 }
