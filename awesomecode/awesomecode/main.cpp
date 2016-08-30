@@ -390,10 +390,10 @@ double my_sqrt(double N)
 /**
  * 回文字符串判断
  */
-bool is_huiwen(string *str)
+bool is_huiwen(string &str)
 {
-    int l = strlen(str);
-    for (int i = 0; i < l / 2; ++i) {
+    size_t l = str.size();
+    for (size_t i = 0; i < l / 2; ++i) {
         if (str[i] != str[l - i - 1]) {
             return false;
         }
