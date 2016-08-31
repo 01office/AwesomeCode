@@ -86,3 +86,23 @@ int my_minus(int a, int b)
     }
     return result;
 }
+
+int maxSubSum(int a[], int n)   // 子数组的最大和
+{
+    int b = 0, sum = 0x80000000;
+    for (int i = 0; i < n; ++i) {
+        if (b > 0) {
+            b += a[i];
+        }
+        else
+        {
+            b = a[i];
+        }
+        
+        if (sum < b) {
+            sum = b;
+        }
+    }
+    
+    return sum;
+}

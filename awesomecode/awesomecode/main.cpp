@@ -430,5 +430,8 @@ int main(int argc, const char * argv[]) {
     }
     manacher(huiwen0);
     
+    int aa[] = {3, -5, 4, 6, 8, -2, 3};
+    cout << maxSubSum(aa, 7) << endl;
+    
     return 0;
 }

@@ -16,4 +16,6 @@ void manacher(std::string &str);
 
 double my_sqrt(double N);
 
+int maxSubSum(int a[], int n);
+
 #endif /* my_algor_hpp */
