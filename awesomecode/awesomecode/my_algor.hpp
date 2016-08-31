@@ -18,4 +18,7 @@ double my_sqrt(double N);
 
 int maxSubSum(int a[], int n);
 
+bool is_match(char a, char b);
+bool my_match(char *s, int n);
+
 #endif /* my_algor_hpp */

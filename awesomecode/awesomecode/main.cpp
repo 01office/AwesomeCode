@@ -433,5 +433,8 @@ int main(int argc, const char * argv[]) {
     int aa[] = {3, -5, 4, 6, 8, -2, 3};
     cout << maxSubSum(aa, 7) << endl;
     
+    char *p = "123()[4]{56}7";
+    cout << my_match(p, 13) << endl;
+    
     return 0;
 }

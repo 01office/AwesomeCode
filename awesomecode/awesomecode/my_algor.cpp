@@ -106,3 +106,44 @@ int maxSubSum(int a[], int n)   // 子数组的最大和
     
     return sum;
 }
+
+bool is_match(char a, char b)
+{
+    if (a == '(' && b == ')') {
+        return true;
+    }
+    if (a == '[' && b == ']') {
+        return true;
+    }
+    if (a == '{' && b == '}') {
+        return true;
+    }
+    
+    return false;
+}
+
+bool my_match(char *s, int n)
+{
+    int *st = new int[n];
+    int top = -1;
+    for (int i = 0; i < n; ++i) {
+        if (s[i] == ')' || s[i] == ']' || s[i] == '}') {
+            if (top >= 0 && is_match(st[top], s[i])) {
+                top--;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else if (s[i] == '(' || s[i] == '[' || s[i] == '{')
+        {
+            st[++top] = s[i];
+        }
+    }
+    
+    if (top == -1) {
+        return true;
+    }
+    return false;
+}
