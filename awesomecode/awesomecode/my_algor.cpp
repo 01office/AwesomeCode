@@ -63,3 +63,26 @@ double my_sqrt(double N)
     
     return x;
 }
+
+int my_add(int a, int b)
+{
+    int result = a;
+    for (int i = 0; i < b; ++i) {
+        result++;
+    }
+    return result;
+}
+
+int my_minus(int a, int b)
+{
+    if (a < b) {
+        return -1;
+    }
+    int result = 0;
+    for (; ; ++result) {
+        if (a == my_add(result, b)) {
+            break;
+        }
+    }
+    return result;
+}
