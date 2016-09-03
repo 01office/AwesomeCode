@@ -21,4 +21,16 @@ int maxSubSum(int a[], int n);
 bool is_match(char a, char b);
 bool my_match(char *s, int n);
 
+class my_string
+{
+public:
+    my_string(const char *str = NULL);
+    my_string(const my_string &another);
+    my_string &operator = (const my_string &rhs);
+    ~my_string();
+    
+private:
+    char *m_data;
+};
+
 #endif /* my_algor_hpp */

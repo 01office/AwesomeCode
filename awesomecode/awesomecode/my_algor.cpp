@@ -10,6 +10,24 @@
 
 #include "my_algor.hpp"
 
+my_string::my_string(const char *str)
+{
+    if (str == NULL) {
+        m_data = new char[1];
+        m_data[0] = '\0';
+    }
+    else
+    {
+        m_data = new char[strlen(str) + 1];
+        strcpy(m_data, str);
+    }
+}
+my_string::my_string(const my_string &another)
+{
+    m_data  = new char[strlen(another.m_data) + 1];
+    strcpy(m_data, another.m_data);
+}
+
 void manacher(std::string &str)
 {
     int *p = new int[str.size() + 1];
