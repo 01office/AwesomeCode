@@ -27,6 +27,20 @@ my_string::my_string(const my_string &another)
     m_data  = new char[strlen(another.m_data) + 1];
     strcpy(m_data, another.m_data);
 }
+my_string &my_string::operator = (const my_string &rhs)
+{
+    if (this == &rhs) {
+        return *this;
+    }
+    delete []m_data;
+    m_data = new char[strlen(rhs.m_data) + 1];
+    strcpy(m_data, rhs.m_data);
+    return *this;
+}
+my_string::~my_string()
+{
+    delete []m_data;
+}
 
 void manacher(std::string &str)
 {
