@@ -403,6 +403,14 @@ public:
 };
 int Get1To100::i = 1;
 
+template <int N>
+class X: X<N - 1> {
+public:
+    X(){cout << N << " ";}
+};
+template <>
+class X<0> {};
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
@@ -451,6 +459,7 @@ int main(int argc, const char * argv[]) {
     cout << my_match(p, 13) << endl;
     
     Get1To100 my_c[100];
+    X<100> x;
     
     return 0;
 }
