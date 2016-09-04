@@ -33,4 +33,6 @@ private:
     char *m_data;
 };
 
+bool is_prime(int n);
+
 #endif /* my_algor_hpp */

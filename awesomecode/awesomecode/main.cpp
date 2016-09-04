@@ -461,5 +461,7 @@ int main(int argc, const char * argv[]) {
     Get1To100 my_c[100];
     X<100> x;
     
+    cout << is_prime(17) << endl;
+    
     return 0;
 }
