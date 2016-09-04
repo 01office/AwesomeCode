@@ -389,6 +389,20 @@ bool is_huiwen(string &str)
     return true;
 }
 
+/**
+ * 不用循环、递归打印1到100
+ */
+class Get1To100
+{
+    static int i;
+    
+public:
+    Get1To100() {
+        cout << i++ << " ";
+    }
+};
+int Get1To100::i = 1;
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
@@ -435,6 +449,8 @@ int main(int argc, const char * argv[]) {
     
     char *p = "123()[4]{56}7";
     cout << my_match(p, 13) << endl;
+    
+    Get1To100 my_c[100];
     
     return 0;
 }
