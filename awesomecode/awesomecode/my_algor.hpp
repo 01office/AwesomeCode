@@ -35,4 +35,6 @@ private:
 
 bool is_prime(int n);
 
+void shaixuanfa(int n);
+
 #endif /* my_algor_hpp */

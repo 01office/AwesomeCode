@@ -192,3 +192,33 @@ bool is_prime(int n)
     }
     return true;
 }
+
+void shaixuanfa(int n)
+{
+    int i, j;
+    bool prime[n + 1];
+    for (i = 2; i <= n; ++i) {
+        if (i % 2 == 0) {
+            prime[i] = false;
+        }
+        else {
+            prime[i] = true;
+        }
+    }
+    
+    for (i = 3; i * i <= n; ++i) {
+        if (prime[i]) {
+            for (j = i + i; j <= n; j += i) {
+                prime[j] = false;
+            }
+        }
+    }
+    
+    for (i = 2; i <= n; ++i) {
+        if (prime[i]) {
+            std::cout << i << " ";
+        }
+    }
+    std::cout << std::endl;
+}
+

@@ -463,5 +463,7 @@ int main(int argc, const char * argv[]) {
     
     cout << is_prime(17) << endl;
     
+    shaixuanfa(100);
+    
     return 0;
 }
