@@ -222,3 +222,16 @@ void shaixuanfa(int n)
     std::cout << std::endl;
 }
 
+int my_atoi(const std::string &str)
+{
+    int sign = 1;
+    if (str[0] == '-') {
+        sign = -1;
+    }
+    int num = 0;
+    for (size_t i = 1; i < str.size(); ++i) {
+        num = num * 10 + (str[i] - '0');
+    }
+    
+    return num * sign;
+}
