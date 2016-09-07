@@ -37,4 +37,6 @@ bool is_prime(int n);
 
 void shaixuanfa(int n);
 
+int my_atoi(const std::string &str);
+
 #endif /* my_algor_hpp */
