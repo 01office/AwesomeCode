@@ -224,12 +224,26 @@ void shaixuanfa(int n)
 
 int my_atoi(const std::string &str)
 {
-    int sign = 1;
-    if (str[0] == '-') {
-        sign = -1;
-    }
     int num = 0;
-    for (size_t i = 1; i < str.size(); ++i) {
+    int sign = 1;
+    const size_t len = str.length();
+    size_t i = 0;
+    
+    while (str[i] == ' ' && i < len) {
+        ++i;
+    }
+    
+    if (str[i] == '-') {
+        sign = -1;
+        ++i;
+    } else if (str[i] == '+') {
+        ++i;
+    }
+
+    for (; i < len; ++i) {
+        if (str[i] < '0' || str[i] > '9') {
+            break;
+        }
         num = num * 10 + (str[i] - '0');
     }
     
