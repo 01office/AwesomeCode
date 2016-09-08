@@ -465,7 +465,7 @@ int main(int argc, const char * argv[]) {
     
     shaixuanfa(100);
     
-    cout << my_atoi("  +234f") << endl;
+    cout << my_atoi("  -2147483657") << endl;
     
     return 0;
 }
