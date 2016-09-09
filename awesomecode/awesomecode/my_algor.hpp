@@ -43,6 +43,7 @@ class Solution
 {
 public:
     std::string simplify_path(const std::string &path);
+    bool is_valid(const std::string &s);
 };
 
 #endif /* my_algor_hpp */

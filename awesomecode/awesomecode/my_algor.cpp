@@ -9,6 +9,7 @@
 #include <iostream>
 #include <vector>
 #include <sstream>
+#include <stack>
 
 #include "my_algor.hpp"
 
@@ -290,4 +291,25 @@ std::string Solution::simplify_path(const std::string &path)
     }
     
     return out.str();
+}
+
+bool Solution::is_valid(const std::string &s)
+{
+    std::string left = "([{";
+    std::string right = ")]}";
+    std::stack<char> stk;
+    
+    for (auto c : s) {
+        if (left.find(c) != std::string::npos) {
+            stk.push(c);
+        } else {
+            if (stk.empty() || stk.top() != left[right.find(c)]) {
+                return false;
+            } else {
+                stk.pop();
+            }
+        }
+    }
+    
+    return stk.empty();
 }
