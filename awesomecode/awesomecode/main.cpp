@@ -458,8 +458,8 @@ int main(int argc, const char * argv[]) {
     char *p = "123()[4]{56}7";
     cout << my_match(p, 13) << endl;
     
-    Get1To100 my_c[100];
-    X<100> x;
+//    Get1To100 my_c[100];
+//    X<100> x;
     
     cout << is_prime(17) << endl;
     
@@ -469,6 +469,7 @@ int main(int argc, const char * argv[]) {
     
     Solution sol;
     cout << sol.simplify_path("/aa/bb/../cc/") << endl;
+    cout << sol.is_valid("([]{})") << endl;
     
     return 0;
 }
