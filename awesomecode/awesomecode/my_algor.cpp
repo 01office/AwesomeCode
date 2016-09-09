@@ -7,6 +7,8 @@
 //
 
 #include <iostream>
+#include <vector>
+#include <sstream>
 
 #include "my_algor.hpp"
 
@@ -253,4 +255,39 @@ int my_atoi(const std::string &str)
     }
     
     return num * sign;
+}
+
+std::string Solution::simplify_path(const std::string &path)
+{
+    std::vector<std::string> dirs;
+    
+    for (auto i = path.begin(); i != path.end(); ) {
+        ++i;
+        
+        auto j = find(i, path.end(), '/');
+        auto dir = std::string(i, j);
+        
+        if (!dir.empty() && dir != ".") {
+            if (dir == "..") {
+                if (!dirs.empty()) {
+                    dirs.pop_back();
+                }
+            } else {
+                dirs.push_back(dir);
+            }
+        }
+        
+        i = j;
+    }
+    
+    std::stringstream out;
+    if (dirs.empty()) {
+        out << "/";
+    } else {
+        for (auto dir : dirs) {
+            out << "/" << dir;
+        }
+    }
+    
+    return out.str();
 }

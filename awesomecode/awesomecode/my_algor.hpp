@@ -39,4 +39,10 @@ void shaixuanfa(int n);
 
 int my_atoi(const std::string &str);
 
+class Solution
+{
+public:
+    std::string simplify_path(const std::string &path);
+};
+
 #endif /* my_algor_hpp */

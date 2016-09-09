@@ -467,5 +467,8 @@ int main(int argc, const char * argv[]) {
     
     cout << my_atoi("  -2147483657") << endl;
     
+    Solution sol;
+    cout << sol.simplify_path("/aa/bb/../cc/") << endl;
+    
     return 0;
 }
