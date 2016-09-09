@@ -469,7 +469,7 @@ int main(int argc, const char * argv[]) {
     
     Solution sol;
     cout << sol.simplify_path("/aa/bb/../cc/") << endl;
-    cout << sol.is_valid("([]{})") << endl;
+    cout << sol.is_valid("(0[]{})") << endl;
     
     return 0;
 }
