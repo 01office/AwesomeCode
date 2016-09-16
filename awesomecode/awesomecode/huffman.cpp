@@ -6,6 +6,7 @@
 //  Copyright © 2016年 heyong. All rights reserved.
 //
 
+#include <iostream>
 #include "huffman.hpp"
 
 void init_huffmantree(HuffmanTree HT, int m)
@@ -48,4 +49,33 @@ void select_min(HuffmanTree HT, int n, int &min1, int &min2)
     
     min1 = TT[m2].p;
     min2 = TT[m2].p;
+}
+
+void create_huffman_tree(HuffmanTree HT, int n)
+{
+    int i;
+    int m;
+    int min1, min2;
+    if (n <= 1) {
+        std::cout << "Param error" << std::endl;
+    }
+    
+    m = 2 * n - 1;
+    
+    init_huffmantree(HT, m);
+    
+    for (i = 0; i < n; ++i) {
+        std::cin >> HT[i].weight;
+    }
+    
+    for (i = n; i < m; ++i) {
+        select_min(HT, i, min1, min2);
+        HT[min1].parent = i;
+        HT[min2].parent = i;
+        HT[i].lchild = min1;
+        HT[i].rchild = min2;
+        HT[i].weight = HT[min1].weight + HT[min2].weight;
+        
+        std::cout << min1 << " " << min2 << std::endl;
+    }
 }

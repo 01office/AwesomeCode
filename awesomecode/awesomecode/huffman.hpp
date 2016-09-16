@@ -30,4 +30,6 @@ void init_huffmantree(HuffmanTree HT, int m);
 
 void select_min(HuffmanTree HT, int n, int &min1, int &min2);
 
+void create_huffman_tree(HuffmanTree HT, int n);
+
 #endif /* huffman_hpp */
