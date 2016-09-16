@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C3F404D1D5B879C00D9E8B4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F404C1D5B879C00D9E8B4 /* main.cpp */; };
+		3C7357E81D8BF1B800361AE1 /* huffman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7357E61D8BF1B800361AE1 /* huffman.cpp */; };
 		3C9B70711D75CE6700E4450B /* my_algor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9B706F1D75CE6700E4450B /* my_algor.cpp */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		3C3F40491D5B879C00D9E8B4 /* awesomecode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = awesomecode; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3F404C1D5B879C00D9E8B4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3C7357E61D8BF1B800361AE1 /* huffman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = huffman.cpp; sourceTree = "<group>"; };
+		3C7357E71D8BF1B800361AE1 /* huffman.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = huffman.hpp; sourceTree = "<group>"; };
 		3C9B706F1D75CE6700E4450B /* my_algor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = my_algor.cpp; sourceTree = "<group>"; };
 		3C9B70701D75CE6700E4450B /* my_algor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = my_algor.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +66,8 @@
 				3C3F404C1D5B879C00D9E8B4 /* main.cpp */,
 				3C9B706F1D75CE6700E4450B /* my_algor.cpp */,
 				3C9B70701D75CE6700E4450B /* my_algor.hpp */,
+				3C7357E61D8BF1B800361AE1 /* huffman.cpp */,
+				3C7357E71D8BF1B800361AE1 /* huffman.hpp */,
 			);
 			path = awesomecode;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			files = (
 				3C3F404D1D5B879C00D9E8B4 /* main.cpp in Sources */,
 				3C9B70711D75CE6700E4450B /* my_algor.cpp in Sources */,
+				3C7357E81D8BF1B800361AE1 /* huffman.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
