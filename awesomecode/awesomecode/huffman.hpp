@@ -32,4 +32,14 @@ void select_min(HuffmanTree HT, int n, int &min1, int &min2);
 
 void create_huffman_tree(HuffmanTree HT, int n);
 
+typedef struct
+{
+    char ch;
+    char bits[10];
+}CodeNode;
+
+typedef CodeNode *HuffmanCode;
+
+void create_huffman_code(HuffmanTree HT, HuffmanCode HC, int n);
+
 #endif /* huffman_hpp */
