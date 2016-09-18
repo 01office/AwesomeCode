@@ -321,6 +321,6 @@ void get_str_from_timestamp(time_t iTimeStamp, char *pTime)
         return;
     }
     
-    sprintf(pTime, "%d-%d-%d %d:%d", pTmp->tm_year + 1900, pTmp->tm_mon + 1, pTmp->tm_mday, pTmp->tm_hour, pTmp->tm_min);
+    sprintf(pTime, "%04d-%02d-%02d %02d:%02d", pTmp->tm_year + 1900, pTmp->tm_mon + 1, pTmp->tm_mday, pTmp->tm_hour, pTmp->tm_min);
 }
 

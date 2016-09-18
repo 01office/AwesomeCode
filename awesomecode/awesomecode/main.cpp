@@ -472,10 +472,10 @@ int main(int argc, const char * argv[]) {
     cout << sol.is_valid("(0[]{})") << endl;
     
     // time_t -> string
-    time_t itime = 1788345656;
-    char *pT;
-    get_str_from_timestamp(itime, pT);
-    cout << *pT << endl;
+    time_t itime = 178345656;
+    string istr;
+    get_str_from_timestamp(itime, const_cast<char *>(istr.c_str()));
+    cout << istr.c_str() << endl;
     
     return 0;
 }
