@@ -477,5 +477,9 @@ int main(int argc, const char * argv[]) {
     get_str_from_timestamp(itime, const_cast<char *>(istr.c_str()));
     cout << istr.c_str() << endl;
     
+    std::vector<int> vlr = {2, 1, 5, 6, 2, 4};
+    myClass mc;
+    std::cout << mc.largest_rectangle(vlr) << std::endl;
+    
     return 0;
 }
