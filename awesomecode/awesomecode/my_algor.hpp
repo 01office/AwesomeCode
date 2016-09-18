@@ -46,4 +46,6 @@ public:
     bool is_valid(const std::string &s);
 };
 
+void get_str_from_timestamp(time_t iTimeStamp, char *pTime);
+
 #endif /* my_algor_hpp */

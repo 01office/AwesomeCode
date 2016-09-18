@@ -471,5 +471,11 @@ int main(int argc, const char * argv[]) {
     cout << sol.simplify_path("/aa/bb/../cc/") << endl;
     cout << sol.is_valid("(0[]{})") << endl;
     
+    // time_t -> string
+    time_t itime = 1788345656;
+    char *pT;
+    get_str_from_timestamp(itime, pT);
+    cout << *pT << endl;
+    
     return 0;
 }

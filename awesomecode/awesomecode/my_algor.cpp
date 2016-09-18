@@ -313,3 +313,14 @@ bool Solution::is_valid(const std::string &s)
     
     return stk.empty();
 }
+
+void get_str_from_timestamp(time_t iTimeStamp, char *pTime)
+{
+    struct tm *pTmp = gmtime(&iTimeStamp);
+    if (pTmp == NULL) {
+        return;
+    }
+    
+    sprintf(pTime, "%d-%d-%d %d:%d", pTmp->tm_year + 1900, pTmp->tm_mon + 1, pTmp->tm_mday, pTmp->tm_hour, pTmp->tm_min);
+}
+
