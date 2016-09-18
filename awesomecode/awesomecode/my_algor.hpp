@@ -48,4 +48,11 @@ public:
 
 void get_str_from_timestamp(time_t iTimeStamp, char *pTime);
 
+class myClass
+{
+public:
+    // largest rectangle
+    int largest_rectangle(std::vector<int> &height);
+};
+
 #endif /* my_algor_hpp */

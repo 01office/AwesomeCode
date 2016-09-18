@@ -324,3 +324,21 @@ void get_str_from_timestamp(time_t iTimeStamp, char *pTime)
     sprintf(pTime, "%04d-%02d-%02d %02d:%02d", pTmp->tm_year + 1900, pTmp->tm_mon + 1, pTmp->tm_mday, pTmp->tm_hour, pTmp->tm_min);
 }
 
+int myClass::largest_rectangle(std::vector<int> &height)
+{
+    int res = 0;
+    for (int i = 0; i < height.size(); ++i) {
+        if (i + 1 < height.size() && height[i] <= height[i + 1]) {
+            continue;
+        }
+    
+        int minH = height[i];
+        for (int j = i; j >= 0; --j) {
+            minH = (minH < height[j] ? minH : height[j]);
+            int area = minH * (i - j + 1);
+            res = (res >= area ? res : area);
+        }
+    }
+    
+    return res;
+}
