@@ -479,7 +479,7 @@ int main(int argc, const char * argv[]) {
     
     std::vector<int> vlr = {2, 1, 5, 6, 2, 4};
     myClass mc;
-    std::cout << mc.largest_rectangle(vlr) << std::endl;
+    std::cout << mc.largest_rectangle_with_stack(vlr) << std::endl;
     
     return 0;
 }

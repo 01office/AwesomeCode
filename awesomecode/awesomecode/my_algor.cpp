@@ -342,3 +342,26 @@ int myClass::largest_rectangle(std::vector<int> &height)
     
     return res;
 }
+
+int myClass::largest_rectangle_with_stack(std::vector<int> &height)
+{
+    int res = 0;
+    std::stack<int> sk;
+    
+    for (int i = 0; i < height.size(); ++i) {
+        if (sk.empty() || (!sk.empty() && height[sk.top()] <= height[i])) {
+            sk.push(i);
+        }
+        else {
+            while (!sk.empty() && height[sk.top()] > height[i]) {
+                int idx = sk.top();
+                sk.pop();
+                int width = sk.empty() ? i : (i - sk.top() - 1);
+                res = (res >= height[idx] * width) ? res : (height[idx] * width);
+            }
+        }
+        sk.push(i);
+    }
+    
+    return res;
+}

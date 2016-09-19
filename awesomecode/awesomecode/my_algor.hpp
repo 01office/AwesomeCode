@@ -53,6 +53,7 @@ class myClass
 public:
     // largest rectangle
     int largest_rectangle(std::vector<int> &height);
+    int largest_rectangle_with_stack(std::vector<int> &height);
 };
 
 #endif /* my_algor_hpp */
