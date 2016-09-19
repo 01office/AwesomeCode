@@ -481,5 +481,13 @@ int main(int argc, const char * argv[]) {
     myClass mc;
     std::cout << mc.largest_rectangle_with_stack(vlr) << std::endl;
     
+    std::string str_to_split("Somewhere down the road");
+    istringstream iss(str_to_split);
+    do {
+        std::string sub;
+        iss >> sub;
+        std::cout << sub << std::endl;
+    } while (iss);
+    
     return 0;
 }
