@@ -10,6 +10,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 #include "my_algor.hpp"
 
@@ -488,6 +489,11 @@ int main(int argc, const char * argv[]) {
         iss >> sub;
         std::cout << sub << std::endl;
     } while (iss);
+    
+    std::vector<int> data = {1, 2, 3, 3, 6, 6, 7, 7, 10};
+    auto lower = std::lower_bound(data.begin(), data.end(), 5);
+    auto upper = std::upper_bound(data.begin(), data.end(), 8);
+    std::cout << *lower << " " << *upper << std::endl;
     
     return 0;
 }
