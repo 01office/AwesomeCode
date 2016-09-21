@@ -497,5 +497,13 @@ int main(int argc, const char * argv[]) {
     auto upper = std::upper_bound(data.begin(), data.end(), 4);
     std::cout << *lower << " " << *upper << std::endl;
     
+    stringstream myss;
+    std::string s;
+    myss << "wuhan university of technology";
+    while (myss >> s)
+    {
+        cout << s << endl;
+    }
+    
     return 0;
 }
