@@ -491,8 +491,10 @@ int main(int argc, const char * argv[]) {
     } while (iss);
     
     std::vector<int> data = {1, 2, 3, 3, 6, 6, 7, 7, 10};
+    // iterator pointing to the first element that not less than value, or last if no sucn element is found
     auto lower = std::lower_bound(data.begin(), data.end(), 5);
-    auto upper = std::upper_bound(data.begin(), data.end(), 8);
+    // returns an iterator to the first element greater than a certain value
+    auto upper = std::upper_bound(data.begin(), data.end(), 4);
     std::cout << *lower << " " << *upper << std::endl;
     
     return 0;
