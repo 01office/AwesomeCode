@@ -56,4 +56,10 @@ public:
     int largest_rectangle_with_stack(std::vector<int> &height);
 };
 
+struct LinkNode
+{
+    int va;
+    LinkNode *next;
+};
+
 #endif /* my_algor_hpp */
