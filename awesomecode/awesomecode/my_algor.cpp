@@ -381,3 +381,16 @@ LinkNode *reverse_link_1(LinkNode *head)
     head->next = NULL;
     return prv;
 }
+
+LinkNode *reverse_link_2(LinkNode *head)
+{
+    if (head == NULL || head->next == NULL) {
+        return head;
+    }
+    else
+    {
+        LinkNode *newNode = reverse_link_2(head->next);
+        head->next = NULL;
+        return newNode;
+    }
+}
