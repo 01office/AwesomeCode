@@ -62,4 +62,9 @@ struct LinkNode
     LinkNode *next;
 };
 
+// die dai
+LinkNode *reverse_link_1(LinkNode *head);
+// di gui
+LinkNode *reverse_link_2(LinkNode *head);
+
 #endif /* my_algor_hpp */

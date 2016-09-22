@@ -365,3 +365,19 @@ int myClass::largest_rectangle_with_stack(std::vector<int> &height)
     
     return res;
 }
+
+LinkNode *reverse_link_1(LinkNode *head)
+{
+    LinkNode *prv = head;
+    LinkNode *cur = head->next;
+    LinkNode *nxt = cur->next;
+    
+    while (cur != NULL) {
+        nxt = nxt->next;
+        prv = cur;
+        cur = cur->next;
+    }
+    
+    head->next = NULL;
+    return prv;
+}
