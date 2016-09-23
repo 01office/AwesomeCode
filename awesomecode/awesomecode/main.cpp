@@ -413,6 +413,8 @@ template <>
 class X<0> {};
 
 void (*fp)();
+typedef void (*fp1)();
+fp1 p1;
 
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
@@ -509,6 +511,8 @@ int main(int argc, const char * argv[]) {
 
     fp = f1;
     (*fp)();
+    p1 = f1;
+    (*p1)();
    
     return 0;
 }
