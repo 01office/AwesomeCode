@@ -394,3 +394,8 @@ LinkNode *reverse_link_2(LinkNode *head)
         return newNode;
     }
 }
+
+void f1()
+{
+    std::cout << "This is f1." << std::endl;
+}

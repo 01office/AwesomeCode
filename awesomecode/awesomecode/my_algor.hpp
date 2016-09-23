@@ -67,4 +67,6 @@ LinkNode *reverse_link_1(LinkNode *head);
 // di gui
 LinkNode *reverse_link_2(LinkNode *head);
 
+void f1();
+
 #endif /* my_algor_hpp */

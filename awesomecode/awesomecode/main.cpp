@@ -412,6 +412,8 @@ public:
 template <>
 class X<0> {};
 
+void (*fp)();
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
@@ -504,6 +506,9 @@ int main(int argc, const char * argv[]) {
     {
         cout << s << endl;
     }
-    
+
+    fp = f1;
+    (*fp)();
+   
     return 0;
 }
