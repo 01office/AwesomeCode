@@ -72,4 +72,7 @@ void f1();
 // 查找字符串中第一个只出现一次的字符，如“abcccad”中‘b’
 void first_appear_once(std::string str);
 
+// 数组中出现次数超过数组长度一半的数字
+int more_than_half_num(std::vector<int> &nums);
+
 #endif /* my_algor_hpp */

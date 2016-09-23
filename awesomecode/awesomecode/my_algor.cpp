@@ -415,3 +415,25 @@ void first_appear_once(std::string str)
     }
     return;
 }
+
+int more_than_half_num(std::vector<int> &nums)
+{
+    int result = nums[0];
+    int times = 1;
+    for (size_t i = 1; i < nums.size(); ++i) {
+        if (times == 0)
+        {
+            result = nums[i];
+            times = 1;
+        }
+        else if (result == nums[i])
+        {
+            times++;
+        }
+        else
+        {
+            times--;
+        }
+    }
+    return result;
+}
