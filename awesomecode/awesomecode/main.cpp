@@ -516,6 +516,9 @@ int main(int argc, const char * argv[]) {
     
     string astr("abccadeee");
     first_appear_once(astr);
+    
+    vector<int> nn = {2, 3, 2, 3, 4, 3, 3};
+    cout << "That one is " << more_than_half_num(nn) << endl;
    
     return 0;
 }
