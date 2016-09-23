@@ -513,6 +513,9 @@ int main(int argc, const char * argv[]) {
     (*fp)();
     p1 = f1;
     (*p1)();
+    
+    string astr("abccadeee");
+    first_appear_once(astr);
    
     return 0;
 }

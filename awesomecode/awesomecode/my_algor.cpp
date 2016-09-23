@@ -399,3 +399,19 @@ void f1()
 {
     std::cout << "This is f1." << std::endl;
 }
+
+void first_appear_once(std::string str)
+{
+    int hash_table[256] = {0};
+    for (size_t i = 0; i < str.size(); ++i) {
+        hash_table[str[i]]++;
+    }
+    
+    for (size_t i = 0; i < str.size(); ++i) {
+        if (hash_table[str[i]] == 1) {
+            std::cout << "First character appear once is " << str[i] << std::endl;
+            return;
+        }
+    }
+    return;
+}
