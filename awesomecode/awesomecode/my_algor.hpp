@@ -75,4 +75,6 @@ void first_appear_once(std::string str);
 // 数组中出现次数超过数组长度一半的数字
 int more_than_half_num(std::vector<int> &nums);
 
+// Catalan
+
 #endif /* my_algor_hpp */
