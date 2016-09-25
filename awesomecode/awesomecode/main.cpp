@@ -463,8 +463,8 @@ int main(int argc, const char * argv[]) {
     char *p = "123()[4]{56}7";
     cout << my_match(p, 13) << endl;
     
-//    Get1To100 my_c[100];
-//    X<100> x;
+    Get1To100 my_c[100];
+    X<100> x;
     
     cout << is_prime(17) << endl;
     
