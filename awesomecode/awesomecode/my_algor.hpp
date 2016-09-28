@@ -77,4 +77,7 @@ int more_than_half_num(std::vector<int> &nums);
 
 // Catalan
 
+// add two number
+int adddd(int, int);
+
 #endif /* my_algor_hpp */
