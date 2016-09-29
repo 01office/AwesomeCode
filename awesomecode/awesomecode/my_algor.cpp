@@ -438,9 +438,9 @@ int more_than_half_num(std::vector<int> &nums)
     return result;
 }
 
-int adddd(int a, int b)
+long adddd(int a, int b)
 {
     char *c = (char *)a;
-    return (int)&c[b];
+    return (long)&c[b];
 }
 
