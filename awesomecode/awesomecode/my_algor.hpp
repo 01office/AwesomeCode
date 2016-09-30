@@ -80,4 +80,7 @@ int more_than_half_num(std::vector<int> &nums);
 // add two number
 long adddd(int, int);
 
+int convert_num(int a, int b);
+int count_one(int x);
+
 #endif /* my_algor_hpp */
