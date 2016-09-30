@@ -521,6 +521,8 @@ int main(int argc, const char * argv[]) {
     cout << "That one is " << more_than_half_num(nn) << endl;
     
     // cout << adddd(7, 8) << endl;
+    
+    cout << convert_num(5, 6) << endl;
    
     return 0;
 }
