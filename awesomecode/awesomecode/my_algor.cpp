@@ -459,3 +459,11 @@ int count_one(int x)
     
     return x;
 }
+
+int replace_bits(int m, int n, int i, int j)
+{
+    int tmp = (1 << i) - 1;
+    tmp &= m;
+    
+    return ((m >> (j + 1)) << (j + 1)) | (n << i) | tmp;
+}

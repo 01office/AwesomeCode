@@ -83,4 +83,7 @@ long adddd(int, int);
 int convert_num(int a, int b);
 int count_one(int x);
 
+// replace M's bit i to j with N
+int replace_bits(int m, int n, int i, int j);
+
 #endif /* my_algor_hpp */

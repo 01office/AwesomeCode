@@ -525,6 +525,8 @@ int main(int argc, const char * argv[]) {
     cout << convert_num(5, 6) << endl;
     
     cout << "Happy birthday!" << endl;
+    
+    cout << replace_bits(1024, 21, 2, 6) << endl;
    
     return 0;
 }
