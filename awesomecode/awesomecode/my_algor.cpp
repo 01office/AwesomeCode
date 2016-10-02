@@ -302,10 +302,12 @@ bool Solution::is_valid(const std::string &s)
     for (auto c : s) {
         if (left.find(c) != std::string::npos) {
             stk.push(c);
-        } else if (right.find(c) != std::string::npos) {
+        }
+        else if (right.find(c) != std::string::npos) {
             if (stk.empty() || stk.top() != left[right.find(c)]) {
                 return false;
-            } else {
+            }
+            else {
                 stk.pop();
             }
         }
