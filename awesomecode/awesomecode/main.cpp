@@ -529,7 +529,7 @@ int main(int argc, const char * argv[]) {
     cout << replace_bits(1024, 21, 2, 6) << endl;
     
     string unistr = "gkhkjbk";
-    cout << is_unique_1(unistr) << endl;
+    cout << is_unique_2(unistr) << endl;
    
     return 0;
 }

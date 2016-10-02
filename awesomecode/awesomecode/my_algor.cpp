@@ -487,3 +487,23 @@ bool is_unique_1(std::string s)
     
     return true;
 }
+
+bool is_unique_2(std::string s)
+{
+    int a[8];
+    memset(a, 0, sizeof(a));
+    
+    size_t len = s.size();
+    for (size_t i = 0; i < len; ++i) {
+        int idx = s[i] / 32;
+        int shift = s[i] % 32;
+        
+        if (a[idx] & (1 << shift)) {
+            return false;
+        }
+        
+        a[idx] |= (1 << shift);
+    }
+    
+    return true;
+}
