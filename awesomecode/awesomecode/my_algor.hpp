@@ -86,4 +86,7 @@ int count_one(int x);
 // replace M's bit i to j with N
 int replace_bits(int m, int n, int i, int j);
 
+// wether the shring is unique
+bool is_unique_1(std::string s);
+
 #endif /* my_algor_hpp */

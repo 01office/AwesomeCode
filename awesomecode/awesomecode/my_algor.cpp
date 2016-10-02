@@ -467,3 +467,21 @@ int replace_bits(int m, int n, int i, int j)
     
     return ((m >> (j + 1)) << (j + 1)) | (n << i) | tmp;
 }
+
+bool is_unique_1(std::string s)
+{
+    bool a[256];
+    memset(a, 0, sizeof(a));
+    size_t len = s.size();
+    
+    for (size_t i = 0; i < len; ++i) {
+        if (a[s[i]]) {
+            return false;
+        }
+        else {
+            a[s[i]] = true;
+        }
+    }
+    
+    return true;
+}
