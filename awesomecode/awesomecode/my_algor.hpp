@@ -91,4 +91,6 @@ bool is_unique_1(std::string s);
 // whether the char in a string is unique (use bit)
 bool is_unique_2(std::string s);
 
+int count_i_s(int n, int i);
+
 #endif /* my_algor_hpp */

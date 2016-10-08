@@ -507,3 +507,32 @@ bool is_unique_2(std::string s)
     
     return true;
 }
+
+// count i from 1 to n
+int count_i_s(int n, int i)
+{
+    // 1 <= i <= 9
+    if (i < 1 || i > 9) {
+        return -1;
+    }
+    
+    int count = 0;
+    int factor = 0;
+    int higher, current, lower;
+    
+    while (n / factor > 0) {
+        higher = n / (factor * 10);
+        current = (n / factor) % 10;
+        lower = n - (n / factor) * factor;
+        
+        if (current < i) {
+            count += higher * factor;
+        } else if (current == i) {
+            count += higher * factor + lower + 1;
+        } else {
+            count += (higher + 1) * factor;
+        }
+    }
+    
+    return count;
+}
