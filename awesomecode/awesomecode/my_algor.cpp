@@ -517,7 +517,7 @@ int count_i_s(int n, int i)
     }
     
     int count = 0;
-    int factor = 0;
+    int factor = 1;
     int higher, current, lower;
     
     while (n / factor > 0) {
@@ -532,6 +532,8 @@ int count_i_s(int n, int i)
         } else {
             count += (higher + 1) * factor;
         }
+        
+        factor *= 10;
     }
     
     return count;

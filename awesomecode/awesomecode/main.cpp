@@ -530,6 +530,8 @@ int main(int argc, const char * argv[]) {
     
     string unistr = "gkhkjbk";
     cout << is_unique_2(unistr) << endl;
+    
+    cout << count_i_s(12, 1) << endl;
    
     return 0;
 }
