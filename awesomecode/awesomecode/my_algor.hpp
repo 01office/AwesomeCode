@@ -93,4 +93,6 @@ bool is_unique_2(std::string s);
 
 int count_i_s(int n, int i);
 
+void reverse_ch(char *pBegin, char *pEnd);
+
 #endif /* my_algor_hpp */
