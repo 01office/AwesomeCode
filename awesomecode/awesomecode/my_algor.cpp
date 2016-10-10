@@ -555,3 +555,12 @@ void reverse_ch(char *pBegin, char *pEnd)
         pEnd--;
     }
 }
+
+// redis SDS (simple dynamic string)
+// sds.h/sdshdr
+struct sdshdr
+{
+    int free;
+    int len;
+    char buf[];
+};
