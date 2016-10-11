@@ -570,6 +570,23 @@ char *reverse_sentence(char *pData)
     
     // reverse the whole sentence
     reverse_ch(pB, pE);
+    
+    pB = pE = pData;
+    while (*pB != '\0') {
+        if (*pB == ' ') {
+            pB++;
+            pE++;
+        }
+        else if (*pE == ' ' || *pE == '\0') {
+            reverse_ch(pB, --pE);
+            pB = ++pE;
+        }
+        else {
+            pE++;
+        }
+    }
+    
+    return pData;
 }
 
 // redis SDS (simple dynamic string)
