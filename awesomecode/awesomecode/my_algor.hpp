@@ -94,5 +94,6 @@ bool is_unique_2(std::string s);
 int count_i_s(int n, int i);
 
 void reverse_ch(char *pBegin, char *pEnd);
+char *reverse_sentence(char *pData);
 
 #endif /* my_algor_hpp */

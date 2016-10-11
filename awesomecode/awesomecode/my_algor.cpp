@@ -555,6 +555,22 @@ void reverse_ch(char *pBegin, char *pEnd)
         pEnd--;
     }
 }
+char *reverse_sentence(char *pData)
+{
+    if (pData == NULL) {
+        return NULL;
+    }
+    
+    char *pB = pData;
+    char *pE = pData;
+    while (*pE != '\0') {
+        pE++;
+    }
+    pE--;
+    
+    // reverse the whole sentence
+    reverse_ch(pB, pE);
+}
 
 // redis SDS (simple dynamic string)
 // sds.h/sdshdr
