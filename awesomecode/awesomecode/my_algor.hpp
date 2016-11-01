@@ -79,6 +79,10 @@ int more_than_half_num(std::vector<int> &nums);
 
 // add two number
 long adddd(int, int);
+// recursion
+int add2(int a, int b);
+// iteration
+int add3(int a, int b);
 
 int convert_num(int a, int b);
 int count_one(int x);
