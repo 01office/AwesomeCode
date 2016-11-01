@@ -533,7 +533,7 @@ int main(int argc, const char * argv[]) {
     
     cout << count_i_s(12, 1) << endl;
     
-    cout << add2(4, 8) << endl;
+    cout << add3(4, 8) << endl;
    
     return 0;
 }

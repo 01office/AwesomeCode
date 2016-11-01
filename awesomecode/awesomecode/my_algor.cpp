@@ -605,6 +605,17 @@ int add2(int a, int b)
     }
     
     int sum = a ^ b;
-    int carry = (a & b) >> 1;
+    int carry = (a & b) << 1;
     return add2(sum, carry);
+}
+
+int add3(int a, int b)
+{
+    while (b != 0) {
+        int sum = a ^ b;
+        int carry = (a & b) << 1;
+        a = sum;
+        b = carry;
+    }
+    return a;
 }
