@@ -535,9 +535,12 @@ int main(int argc, const char * argv[]) {
     
     cout << add3(4, 8) << endl;
     
-    srand((unsigned int)time(0));
+    unsigned int sd = (unsigned int)time(NULL);
+    cout << sd << endl;
+    srand(sd);
     cout << rand() << endl;
     cout << rand() << endl;
+    cout << RAND_MAX << endl;
    
     return 0;
 }
