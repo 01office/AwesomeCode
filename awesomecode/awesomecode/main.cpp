@@ -534,6 +534,10 @@ int main(int argc, const char * argv[]) {
     cout << count_i_s(12, 1) << endl;
     
     cout << add3(4, 8) << endl;
+    
+    srand((unsigned int)time(0));
+    cout << rand() << endl;
+    cout << rand() << endl;
    
     return 0;
 }
