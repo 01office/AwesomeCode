@@ -11,6 +11,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <tuple>
 
 #include "my_algor.hpp"
 
@@ -416,6 +417,12 @@ void (*fp)();
 typedef void (*fp1)();
 fp1 p1;
 
+// returning serveral values from a function
+std::tuple<int, int, int, int> foo(int a, int b)
+{
+    return std::make_tuple(a + b, a - b, a * b, a / b);
+}
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
@@ -541,6 +548,9 @@ int main(int argc, const char * argv[]) {
     cout << rand() << endl;
     cout << rand() << endl;
     cout << RAND_MAX << endl;
+    
+    auto mrvs = foo(7, 2);
+    cout << get<0>(mrvs) << " " << get<1>(mrvs) << " " << get<2>(mrvs) << " " << get<3>(mrvs) << endl;
    
     return 0;
 }
