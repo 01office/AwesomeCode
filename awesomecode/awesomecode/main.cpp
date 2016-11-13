@@ -551,6 +551,10 @@ int main(int argc, const char * argv[]) {
     
     auto mrvs = foo(7, 2);
     cout << get<0>(mrvs) << " " << get<1>(mrvs) << " " << get<2>(mrvs) << " " << get<3>(mrvs) << endl;
+    
+    string strtoreplace = "This is my house!";
+    replace_blank(strtoreplace);
+    cout << strtoreplace << endl;
    
     return 0;
 }

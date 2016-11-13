@@ -100,4 +100,7 @@ int count_i_s(int n, int i);
 void reverse_ch(char *pBegin, char *pEnd);
 char *reverse_sentence(char *pData);
 
+// replace blank with %20
+void replace_blank(std::string &str);
+
 #endif /* my_algor_hpp */

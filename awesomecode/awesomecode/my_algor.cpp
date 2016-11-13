@@ -631,3 +631,33 @@ int add3(int a, int b)
     }
     return a;
 }
+
+// replace blank with %20
+void replace_blank(std::string &str)
+{
+    if (str.size() == 0) {
+        return;
+    }
+    int oldlen = str.size();
+    int newlen = oldlen;
+    for (int i = 0; i < oldlen; ++i) {
+        if (str[i] == ' ') {
+            newlen += 2;
+        }
+    }
+    
+    int oldindex = oldlen;
+    int newindex = newlen;
+    while (oldindex >= 0 && newindex > oldindex) {
+        if (str[oldindex] == ' ') {
+            str[newindex--] = '0';
+            str[newindex--] = '2';
+            str[newindex--] = '%';
+        }
+        else {
+            str[newindex--] = str[oldindex];
+        }
+        
+        --oldindex;
+    }
+}
