@@ -555,6 +555,9 @@ int main(int argc, const char * argv[]) {
     string strtoreplace = "This is my house!";
     replace_blank(strtoreplace);
     cout << strtoreplace << endl;
+    
+    system("pwd");
+    system("ls -l");
    
     return 0;
 }
