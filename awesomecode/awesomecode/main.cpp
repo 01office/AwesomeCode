@@ -558,6 +558,8 @@ int main(int argc, const char * argv[]) {
     
     system("pwd");
     system("ls -l");
+    
+    cout << sizeof sd << endl;
    
     return 0;
 }
