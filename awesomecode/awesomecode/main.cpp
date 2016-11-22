@@ -560,6 +560,8 @@ int main(int argc, const char * argv[]) {
     system("ls -l");
     
     cout << sizeof sd << endl;
+    
+    cout << is_2_de_n(16) << endl;
    
     return 0;
 }

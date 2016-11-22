@@ -103,4 +103,6 @@ char *reverse_sentence(char *pData);
 // replace blank with %20
 void replace_blank(std::string &str);
 
+bool is_2_de_n(int n);
+
 #endif /* my_algor_hpp */

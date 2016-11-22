@@ -661,3 +661,8 @@ void replace_blank(std::string &str)
         --oldindex;
     }
 }
+
+bool is_2_de_n(int n)
+{
+    return !(n & (n - 1));
+}
