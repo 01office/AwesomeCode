@@ -566,7 +566,15 @@ int main(int argc, const char * argv[]) {
     int arr[] = {1, 2, 3, 4, 5};
     int *p1 = (int *)(&arr + 1);
     int *p2 = (int *)(arr + 1);
-    cout << p1[-1] << " " << *p2 << endl;   // 5 2
+    int *p3 = &arr[0] + 1;
+    cout << p1[-1] << " " << *p2 << " " << *p3 << endl;   // 5 2 2
+    
+    int arr2d[2][3] = {1, 3, 5, 7, 9, 11};
+    int *p4 = (int *)(&arr2d + 1);
+    int *p5 = (int *)(arr2d + 1);
+    int *p6 = (int *)(&arr2d[0] + 1);
+    int *p7 = (int *)(&arr2d[0][0] + 1);
+    cout << p4[-1] << " " << *p5 << " " << *p6 << " " << *p7 << endl;  // 11 7 7 3
    
     return 0;
 }
