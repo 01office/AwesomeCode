@@ -562,6 +562,11 @@ int main(int argc, const char * argv[]) {
     cout << sizeof sd << endl;
     
     cout << is_2_de_n(16) << endl;
+    
+    int arr[] = {1, 2, 3, 4, 5};
+    int *p1 = (int *)(&arr + 1);
+    int *p2 = (int *)(arr + 1);
+    cout << p1[-1] << " " << *p2 << endl;   // 5 2
    
     return 0;
 }
