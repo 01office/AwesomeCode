@@ -681,3 +681,22 @@ void random_shuffle(std::vector<int> &iv)
         my_swap(iv[i], iv[rand() % (i + 1)]);
     }
 }
+
+int xpower(int x, unsigned int n)
+{
+    if (n == 0) {
+        return 1;
+    }
+    
+    int result = 1;
+    while (n != 0) {
+        if ((n & 1) != 0) {
+            result *= x;
+        }
+        
+        x *= x;
+        n >>= 1;
+    }
+    
+    return result;
+}

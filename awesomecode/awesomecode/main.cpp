@@ -588,5 +588,7 @@ int main(int argc, const char * argv[]) {
     random_shuffle(data);
     print_vec(data);
    
+    cout << xpower(3, 6) << endl;
+    
     return 0;
 }
