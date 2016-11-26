@@ -41,6 +41,14 @@ void myprint(int arr[], int n)
     cout << endl;
 }
 
+void print_vec(std::vector<int> &iv)
+{
+    for (std::vector<int>::iterator it = iv.begin(); it != iv.end(); ++it) {
+        cout << *it << " ";
+    }
+    cout << endl;
+}
+
 /**
  * 冒泡排序
  * 1. 比较两个相邻的数据，如果前面的大于后面的，则交换
@@ -575,6 +583,10 @@ int main(int argc, const char * argv[]) {
     int *p6 = (int *)(&arr2d[0] + 1);
     int *p7 = (int *)(&arr2d[0][0] + 1);
     cout << p4[-1] << " " << *p5 << " " << *p6 << " " << *p7 << endl;  // 11 7 7 3
+    
+    print_vec(data);
+    random_shuffle(data);
+    print_vec(data);
    
     return 0;
 }

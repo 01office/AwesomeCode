@@ -13,6 +13,13 @@
 
 #include "my_algor.hpp"
 
+void my_swap(int &a, int &b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
 my_string::my_string(const char *str)
 {
     if (str == NULL) {
@@ -665,4 +672,12 @@ void replace_blank(std::string &str)
 bool is_2_de_n(int n)
 {
     return !(n & (n - 1));
+}
+
+void random_shuffle(std::vector<int> &iv)
+{
+    srand(time(NULL));
+    for (size_t i = 1; i < iv.size(); ++i) {
+        my_swap(iv[i], iv[rand() % (i + 1)]);
+    }
 }

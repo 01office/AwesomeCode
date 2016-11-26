@@ -11,6 +11,7 @@
 
 #include <string>
 #include <cmath>
+#include <ctime>
 
 void manacher(std::string &str);
 
@@ -104,5 +105,7 @@ char *reverse_sentence(char *pData);
 void replace_blank(std::string &str);
 
 bool is_2_de_n(int n);
+
+void random_shuffle(std::vector<int> &iv);
 
 #endif /* my_algor_hpp */
