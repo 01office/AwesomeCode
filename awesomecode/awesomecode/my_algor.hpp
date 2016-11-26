@@ -108,4 +108,6 @@ bool is_2_de_n(int n);
 
 void random_shuffle(std::vector<int> &iv);
 
+int xpower(int x, int n);
+
 #endif /* my_algor_hpp */
