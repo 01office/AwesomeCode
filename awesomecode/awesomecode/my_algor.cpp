@@ -718,8 +718,8 @@ bool is_sequence(std::vector<int> &ivec)
         if (*it == *(it++)) {
             return false;
         }
-        numofgap = *(it++) - *it - 1;
+        numofgap += *(it++) - *it - 1;
     }
     
-    return (numofgap == numofzero);
+    return (numofgap > numofzero ? false : true);
 }
