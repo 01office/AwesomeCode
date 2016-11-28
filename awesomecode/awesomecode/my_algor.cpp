@@ -700,3 +700,26 @@ int xpower(int x, unsigned int n)
     
     return result;
 }
+
+bool is_sequence(std::vector<int> &ivec)
+{
+    std::sort(ivec.begin(), ivec.end());
+    std::vector<int>::iterator it = ivec.begin();
+    int numofzero = 0;
+    int numofgap = 0;
+    
+    for (it = ivec.begin(); it != ivec.end(); ++it) {
+        if (*it == 0) {
+            numofzero++;
+        }
+    }
+    
+    for (it = ivec.begin() + numofzero; it != (ivec.end() - 1); ++it) {
+        if (*it == *(it++)) {
+            return false;
+        }
+        numofgap = *(it++) - *it - 1;
+    }
+    
+    return (numofgap == numofzero);
+}

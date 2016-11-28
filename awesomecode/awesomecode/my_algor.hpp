@@ -110,4 +110,7 @@ void random_shuffle(std::vector<int> &iv);
 
 int xpower(int x, unsigned int n);
 
+// is 5 poker a sequence, King can be anyone
+bool is_sequence(std::vector<int> &ivec);
+
 #endif /* my_algor_hpp */
