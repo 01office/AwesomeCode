@@ -113,4 +113,7 @@ int xpower(int x, unsigned int n);
 // is 5 poker a sequence, King can be anyone
 bool is_sequence(std::vector<int> &ivec);
 
+// jump game II
+int can_jump_2(std::vector<int> &nums);
+
 #endif /* my_algor_hpp */
