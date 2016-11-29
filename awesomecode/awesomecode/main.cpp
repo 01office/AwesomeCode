@@ -590,5 +590,8 @@ int main(int argc, const char * argv[]) {
    
     cout << xpower(3, 6) << endl;
     
+    vector<int> iv = {0, 3, 5, 6, 7};
+    cout << is_sequence(iv) << endl;
+    
     return 0;
 }
