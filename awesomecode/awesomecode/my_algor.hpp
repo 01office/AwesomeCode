@@ -116,4 +116,6 @@ bool is_sequence(std::vector<int> &ivec);
 // jump game II
 int can_jump_2(std::vector<int> &nums);
 
+// longest consequence in an array
+
 #endif /* my_algor_hpp */
