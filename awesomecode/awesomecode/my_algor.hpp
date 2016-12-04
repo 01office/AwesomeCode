@@ -70,6 +70,15 @@ LinkNode *reverse_link_2(LinkNode *head);
 
 void f1();
 
+class LinkSolution
+{
+public:
+    LinkNode *find_first_common_node(LinkNode *ph1, LinkNode *ph2);
+    
+private:
+    int get_length(LinkNode *ph);
+};
+
 // 查找字符串中第一个只出现一次的字符，如“abcccad”中‘b’
 void first_appear_once(std::string str);
 

@@ -767,3 +767,56 @@ int inverse_pairs(std::vector<int> &iv)
     }
     return result;
 }
+
+LinkNode *LinkSolution::find_first_common_node(LinkNode *ph1, LinkNode *ph2)
+{
+    int len1 = get_length(ph1);
+    int len2 = get_length(ph2);
+//    int lendiff = (len1 > len2) ? (len1 - len2) : (len2 - len1);
+//    if (len1 > len2) {
+//        LinkNode *plong = ph1;
+//        LinkNode *pshort = ph2;
+//        int lendiff = len1 - len2;
+//    } else {
+//        LinkNode *plong = ph2;
+//        LinkNode *pshort = ph1;
+//        int lendiff = len2 - len1;
+//    }
+    
+    int lendiff = len1 - len2;
+    LinkNode *plong = ph1;
+    LinkNode *pshort = ph2;
+    
+    if (len2 > len1) {
+        plong = ph2;
+        pshort = ph1;
+        lendiff = len2 - len1;
+    }
+    
+    for (int i = 0; i < lendiff; i++) {
+        plong = plong->next;
+    }
+    
+    while (plong != NULL && pshort != NULL && plong->va != pshort->va) {
+        plong = plong->next;
+        pshort = pshort->next;
+    }
+    
+    return plong;
+}
+
+int LinkSolution::get_length(LinkNode *ph)
+{
+    if (ph == NULL) {
+        return 0;
+    }
+    
+    int len = 0;
+    LinkNode *pt = ph;
+    while (pt != NULL) {
+        len++;
+        pt = pt->next;
+    }
+    
+    return len;
+}
