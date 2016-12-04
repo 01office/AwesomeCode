@@ -754,3 +754,16 @@ int can_jump_2(std::vector<int> &nums)
     
     return 0;
 }
+
+int inverse_pairs(std::vector<int> &iv)
+{
+    int result = 0;
+    for (int i = 0; i < iv.size(); ++i) {
+        for (int j = i + 1; j < iv.size(); ++j) {
+            if (iv[j] < iv[i]) {
+                result++;
+            }
+        }
+    }
+    return result;
+}

@@ -118,4 +118,6 @@ int can_jump_2(std::vector<int> &nums);
 
 // longest consequence in an array
 
+int inverse_pairs(std::vector<int> &iv);
+
 #endif /* my_algor_hpp */

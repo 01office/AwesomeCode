@@ -593,5 +593,8 @@ int main(int argc, const char * argv[]) {
     vector<int> iv = {0, 3, 5, 6, 7};
     cout << is_sequence(iv) << endl;
     
+    vector<int> ivec = {7, 5, 6, 4};
+    cout << inverse_pairs(ivec) << endl;
+    
     return 0;
 }
