@@ -820,3 +820,30 @@ int LinkSolution::get_length(LinkNode *ph)
     
     return len;
 }
+
+unsigned int Temp::N = 0;
+unsigned int Temp::Sum = 0;
+Temp::Temp()
+{
+    ++N;
+    Sum += N;
+}
+void Temp::Reset()
+{
+    N = 0;
+    Sum = 0;
+}
+unsigned int Temp::Getsum()
+{
+    return Sum;
+}
+// 1+2+...+n
+unsigned int sum_solu(unsigned int n)
+{
+    Temp::Reset();
+    Temp *a = new Temp[n];
+    delete []a;
+    a = NULL;
+    
+    return Temp::Getsum();
+}

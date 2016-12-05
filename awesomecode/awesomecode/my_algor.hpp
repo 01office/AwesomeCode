@@ -129,4 +129,16 @@ int can_jump_2(std::vector<int> &nums);
 
 int inverse_pairs(std::vector<int> &iv);
 
+class Temp
+{
+public:
+    Temp();
+    static void Reset();
+    static unsigned int Getsum();
+    
+private:
+    static unsigned int N;
+    static unsigned int Sum;
+};
+
 #endif /* my_algor_hpp */
