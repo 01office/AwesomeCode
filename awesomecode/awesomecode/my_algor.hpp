@@ -141,4 +141,6 @@ private:
     static unsigned int Sum;
 };
 
+bool find_numbers_with_sum(int array[], int len, int sum, int &a, int &b);
+
 #endif /* my_algor_hpp */
