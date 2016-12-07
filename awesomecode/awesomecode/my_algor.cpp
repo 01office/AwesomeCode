@@ -847,3 +847,24 @@ unsigned int sum_solu(unsigned int n)
     
     return Temp::Getsum();
 }
+
+bool find_numbers_with_sum(int array[], int len, int sum, int &a, int &b)
+{
+    int begin = 0, end = len - 1;
+    
+    while (begin <= end) {
+        if (array[begin] + array[end] == sum) {
+            a = array[begin];
+            b = array[end];
+            return true;
+        }
+        else if (array[begin] + array[end] > sum) {
+            end--;
+        }
+        else {
+            begin++;
+        }
+    }
+    
+    return false;
+}
