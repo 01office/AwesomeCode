@@ -869,6 +869,14 @@ bool find_numbers_with_sum(int array[], int len, int sum, int &a, int &b)
     return false;
 }
 
+void print_sequence(int small, int big)
+{
+    for (int i = small; i <= big; i++) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+}
+
 void find_continuous_sequence(int sum)
 {
     if (sum < 3) {
@@ -881,7 +889,7 @@ void find_continuous_sequence(int sum)
     
     while (small < middle) {
         if (cursum == sum) {
-            return;
+            print_sequence(small, big);
         }
         
         while (cursum > sum && small < middle) {
@@ -889,7 +897,7 @@ void find_continuous_sequence(int sum)
             small++;
             
             if (cursum == sum) {
-                return;
+                print_sequence(small, big);
             }
         }
         

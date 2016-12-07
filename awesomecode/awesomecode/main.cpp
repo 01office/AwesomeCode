@@ -596,5 +596,7 @@ int main(int argc, const char * argv[]) {
     vector<int> ivec = {7, 5, 6, 4};
     cout << inverse_pairs(ivec) << endl;
     
+    find_continuous_sequence(15);
+    
     return 0;
 }
