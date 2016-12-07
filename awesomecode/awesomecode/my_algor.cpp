@@ -868,3 +868,32 @@ bool find_numbers_with_sum(int array[], int len, int sum, int &a, int &b)
     
     return false;
 }
+
+void find_continuous_sequence(int sum)
+{
+    if (sum < 3) {
+        return;
+    }
+    
+    int small = 1, big = 2;
+    int middle = (sum + 1) >> 1;
+    int cursum = small + big;
+    
+    while (small < middle) {
+        if (cursum == sum) {
+            return;
+        }
+        
+        while (cursum > sum && small < middle) {
+            cursum -= small;
+            small++;
+            
+            if (cursum == sum) {
+                return;
+            }
+        }
+        
+        big++;
+        cursum += big;
+    }
+}
