@@ -144,4 +144,6 @@ private:
 bool find_numbers_with_sum(int array[], int len, int sum, int &a, int &b);
 void find_continuous_sequence(int sum);
 
+void numbers_appear_once(int array[], int len, int &first, int &second);
+
 #endif /* my_algor_hpp */

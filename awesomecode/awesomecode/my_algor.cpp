@@ -905,3 +905,24 @@ void find_continuous_sequence(int sum)
         cursum += big;
     }
 }
+
+int find_first_bit1(int num)
+{
+    int result = 0;
+    while ((num & 1) == 0) {
+        num = num >> 1;
+        result++;
+    }
+    return result;
+}
+void numbers_appear_once(int array[], int len, int &first, int &second)
+{
+    if (array == NULL || len < 2) {
+        return;
+    }
+    
+    int resultOR = 0;
+    for (int i = 0; i < len; i++) {
+        resultOR ^= array[i];
+    }
+}
