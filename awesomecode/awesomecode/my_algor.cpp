@@ -909,11 +909,15 @@ void find_continuous_sequence(int sum)
 int find_first_bit1(int num)
 {
     int result = 0;
-    while ((num & 1) == 0) {
-        num = num >> 1;
+    while ((num & 1) == 0 && result < 8 * sizeof(int)) {
+        num >>= 1;
         result++;
     }
     return result;
+}
+bool is_bit_1(int num, int idx)
+{
+    return (num >> idx) & 1;
 }
 void numbers_appear_once(int array[], int len, int &first, int &second)
 {
@@ -924,5 +928,16 @@ void numbers_appear_once(int array[], int len, int &first, int &second)
     int resultOR = 0;
     for (int i = 0; i < len; i++) {
         resultOR ^= array[i];
+    }
+    
+    int idx = find_first_bit1(resultOR);
+    
+    for (int j = 0; j < len; j++) {
+        if (is_bit_1(array[j], idx)) {
+            first ^= array[j];
+        }
+        else {
+            second ^= array[j];
+        }
     }
 }
