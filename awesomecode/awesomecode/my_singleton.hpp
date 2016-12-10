@@ -9,6 +9,22 @@
 #ifndef my_singleton_hpp
 #define my_singleton_hpp
 
-#include <stdio.h>
+#include <iostream>
+
+class CacheApi
+{
+public:
+    static CacheApi *Instance();
+    
+    void notify();
+    
+private:
+    CacheApi();
+    ~CacheApi();
+    CacheApi(const CacheApi &rhs);
+    CacheApi &operator= (const CacheApi &ths);
+    
+    static CacheApi *m_pInstance;
+};
 
 #endif /* my_singleton_hpp */

@@ -7,3 +7,20 @@
 //
 
 #include "my_singleton.hpp"
+
+CacheApi::CacheApi(){}
+CacheApi::~CacheApi(){}
+
+CacheApi *CacheApi::m_pInstance = NULL;
+CacheApi *CacheApi::Instance()
+{
+    if (m_pInstance == NULL) {
+        m_pInstance = new CacheApi;
+    }
+    return m_pInstance;
+}
+
+void CacheApi::notify()
+{
+    std::cout << "Hello, singleton" << std::endl;
+}
