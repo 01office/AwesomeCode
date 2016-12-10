@@ -11,6 +11,8 @@
 
 #include <iostream>
 
+#include "g_singleton.h"
+
 class CacheApi
 {
 public:
@@ -25,6 +27,15 @@ private:
     CacheApi &operator= (const CacheApi &ths);
     
     static CacheApi *m_pInstance;
+};
+
+// use macro
+class GApi
+{
+    DECLARE_SINGLETON(GApi)
+
+public:
+    void notify();
 };
 
 #endif /* my_singleton_hpp */

@@ -24,3 +24,12 @@ void CacheApi::notify()
 {
     std::cout << "Hello, singleton" << std::endl;
 }
+
+// use macro
+IMPLEMENT_SINGLETON(GApi)
+GApi::GApi(){}
+GApi::~GApi(){}
+void GApi::notify()
+{
+    std::cout << "Use Macro" << std::endl;
+}
