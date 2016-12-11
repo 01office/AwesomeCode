@@ -941,3 +941,32 @@ void numbers_appear_once(int array[], int len, int &first, int &second)
         }
     }
 }
+
+void print_seq_numbers(int sum)
+{
+    if (sum < 3) {
+        return;
+    }
+    
+    int small = 1, big = 2;
+    int middle = (sum + 1) >> 1;
+    int cursum = small + big;
+    
+    while (small < middle) {
+        if (cursum == sum) {
+            print_sequence(small, big);
+            break;
+        }
+        while (cursum > sum && small < middle) {
+            cursum -= small;
+            small++;
+            
+            if (cursum == sum) {
+                print_sequence(small, big);
+            }
+        }
+        
+        big++;
+        cursum += big;
+    }
+}
