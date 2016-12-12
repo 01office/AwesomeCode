@@ -12,6 +12,7 @@
 #include <string>
 #include <cmath>
 #include <ctime>
+#include <functional>
 
 void manacher(std::string &str);
 
