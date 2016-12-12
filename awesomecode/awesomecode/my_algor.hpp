@@ -13,6 +13,7 @@
 #include <cmath>
 #include <ctime>
 #include <functional>
+#include <algorithm>
 
 void manacher(std::string &str);
 
@@ -159,5 +160,8 @@ bool find_numbers_with_sum(int array[], int len, int sum, int &a, int &b);
 void find_continuous_sequence(int sum);
 
 void numbers_appear_once(int array[], int len, int &first, int &second);
+
+// functor
+void reorder(std::vector<int> &iv);
 
 #endif /* my_algor_hpp */

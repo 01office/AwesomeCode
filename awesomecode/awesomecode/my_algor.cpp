@@ -989,3 +989,8 @@ void TreeFunc::mirror_tree(TreeNode *pNode)
         mirror_tree(pNode->pRight);
     }
 }
+
+void reorder(std::vector<int> &iv)
+{
+    std::sort(iv.begin(), iv.end(), std::less<int>());
+}
