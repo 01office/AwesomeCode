@@ -63,6 +63,19 @@ struct LinkNode
     LinkNode *next;
 };
 
+struct TreeNode
+{
+    int value;
+    TreeNode *pLeft;
+    TreeNode *pRight;
+};
+
+class TreeFunc
+{
+public:
+    void mirror_tree(TreeNode *pNode);
+};
+
 // die dai
 LinkNode *reverse_link_1(LinkNode *head);
 // di gui

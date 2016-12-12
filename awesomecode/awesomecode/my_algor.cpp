@@ -970,3 +970,22 @@ void print_seq_numbers(int sum)
         cursum += big;
     }
 }
+
+void TreeFunc::mirror_tree(TreeNode *pNode)
+{
+    if (pNode == NULL || (pNode->pLeft == NULL && pNode->pRight == NULL)) {
+        return;
+    }
+    
+    TreeNode *pTemp = pNode->pLeft;
+    pNode->pLeft = pNode->pRight;
+    pNode->pRight = pTemp;
+    
+    if (pNode->pLeft) {
+        mirror_tree(pNode->pLeft);
+    }
+    
+    if (pNode->pRight) {
+        mirror_tree(pNode->pRight);
+    }
+}
