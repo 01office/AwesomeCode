@@ -990,7 +990,24 @@ void TreeFunc::mirror_tree(TreeNode *pNode)
     }
 }
 
+void TreeFunc::find_path(TreeNode *pRoot, int sum)
+{
+    if (!pRoot || sum < 0) {
+        return;
+    }
+    
+    std::vector<int> path;
+    int cursum = pRoot->value;
+    
+    find_path(pRoot, sum, path, cursum);
+}
+
+void TreeFunc::find_path(TreeNode *pRoot, int sum, std::vector<int> &path, int cursum)
+{
+    
+}
+
 void reorder(std::vector<int> &iv)
 {
-    std::sort(iv.begin(), iv.end(), std::less<int>());
+    std::sort(iv.begin(), iv.end(), std::greater<int>());
 }

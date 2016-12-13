@@ -76,6 +76,10 @@ class TreeFunc
 {
 public:
     void mirror_tree(TreeNode *pNode);
+    void find_path(TreeNode *pRoot, int sum);
+    
+private:
+    void find_path(TreeNode *pRoot, int sum, std::vector<int> &path, int cursum);
 };
 
 // die dai
