@@ -14,6 +14,7 @@
 #include <tuple>
 
 #include "my_algor.hpp"
+#include "my_singleton.hpp"
 
 using namespace std;
 
@@ -431,6 +432,15 @@ std::tuple<int, int, int, int> foo(int a, int b)
     return std::make_tuple(a + b, a - b, a * b, a / b);
 }
 
+void func1()
+{
+    cout << "This is function1" << endl;
+}
+void func2()
+{
+    cout << "This is function2" << endl;
+}
+
 int main(int argc, const char * argv[]) {
     int a[] = {5, 7, 2, 4, 10, 88, 22, 13, 66, 11};
     
@@ -597,6 +607,24 @@ int main(int argc, const char * argv[]) {
     cout << inverse_pairs(ivec) << endl;
     
     find_continuous_sequence(15);
+    
+    atexit(func1);
+    atexit(func2);
+    cout << "This is function3" << endl;
+    
+    int ar[] = {3, 2, 1, 2, 1, 7};
+    int fst = 0, snd = 0;
+    numbers_appear_once(ar, 6, fst, snd);
+    cout << fst << " " << snd << endl;
+    
+    CacheApi::Instance()->notify();
+    GApi::Instance()->notify();
+    
+    pthread_once_t once = PTHREAD_ONCE_INIT;
+    
+    print_vec(vlr);
+    reorder(vlr);
+    print_vec(vlr);
     
     return 0;
 }
