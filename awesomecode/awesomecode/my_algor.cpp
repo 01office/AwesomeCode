@@ -1011,3 +1011,17 @@ void reorder(std::vector<int> &iv)
 {
     std::sort(iv.begin(), iv.end(), std::greater<int>());
 }
+
+void *mymemcpy(void *dst, void *src, size_t count)
+{
+    char *ret = (char *)dst;
+    char *dst_t = ret;
+    char *src_t = (char *)src;
+    
+    while(count--)
+    {
+        *dst_t++ = *src_t++;
+    }
+    
+    return ret;
+}
