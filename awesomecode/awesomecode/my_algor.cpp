@@ -10,6 +10,7 @@
 #include <vector>
 #include <sstream>
 #include <stack>
+#include <cassert>
 
 #include "my_algor.hpp"
 
@@ -1023,5 +1024,15 @@ void *mymemcpy(void *dst, void *src, size_t count)
         *dst_t++ = *src_t++;
     }
     
+    return ret;
+}
+
+char *my_strcpy(char *dest, const char *src)
+{
+    assert(dest != NULL && src != NULL);
+    char *ret = dest;
+    while ((*dest++ = *src++) != '\0') {
+        ;
+    }
     return ret;
 }
