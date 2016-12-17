@@ -168,6 +168,7 @@ void numbers_appear_once(int array[], int len, int &first, int &second);
 // functor
 void reorder(std::vector<int> &iv);
 
+void *mymemcpy(void *dst, void *src, size_t count);
 char *my_strcpy(char *dest, const char *src);
 
 #endif /* my_algor_hpp */
