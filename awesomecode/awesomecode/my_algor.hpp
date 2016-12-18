@@ -190,4 +190,10 @@ void clr(int i)
     a[i >> SHIFT] &= ~(1 << (i & MASK));
 }
 
+///
+int test(int i)
+{
+    return a[i >> SHIFT] & (1 << (i & MASK));
+}
+
 #endif /* my_algor_hpp */
