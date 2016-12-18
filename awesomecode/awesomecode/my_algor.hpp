@@ -171,4 +171,23 @@ void reorder(std::vector<int> &iv);
 void *mymemcpy(void *dst, void *src, size_t count);
 char *my_strcpy(char *dest, const char *src);
 
+// bit map
+#define BITSPERWORD 32
+#define SHIFT 5
+#define MASK 0x1F
+#define N 10000000
+int a[1 + N / BITSPERWORD];
+
+///
+void set(int i)
+{
+    a[i >> SHIFT] |= (1 << (i & MASK));
+}
+
+///
+void clr(int i)
+{
+    a[i >> SHIFT] &= ~(1 << (i & MASK));
+}
+
 #endif /* my_algor_hpp */
