@@ -27,6 +27,7 @@ public:
     B(){std::cout << "construct B" << std::endl;}
     ~B(){std::cout << "destruct B" << std::endl;}
     virtual void fun1(){std::cout << "B fun1" << std::endl; this->fun2();}
+    void fun2(){std::cout << "B fun2" << std::endl;}
     void fun3(){std::cout << "B fun3" << std::endl;}
     void doSth(){std::cout << "B do sth" << std::endl; fun1();}
 };
