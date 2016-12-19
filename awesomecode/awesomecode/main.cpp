@@ -15,6 +15,7 @@
 
 #include "my_algor.hpp"
 #include "my_singleton.hpp"
+#include "jd.h"
 
 using namespace std;
 
@@ -625,6 +626,9 @@ int main(int argc, const char * argv[]) {
     print_vec(vlr);
     reorder(vlr);
     print_vec(vlr);
+    
+    B b;
+    b.doSth();
     
     return 0;
 }
