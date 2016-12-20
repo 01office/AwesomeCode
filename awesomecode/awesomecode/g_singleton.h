@@ -30,4 +30,18 @@ private:\
         return m_pInstance;\
     }
 
+///
+#define DECL_MEMB(Type, Attr)\
+public:\
+    Type *m_##Attr;\
+public:\
+    void *set()\
+    {\
+        m_##Attr = Attr;\
+    }\
+    Type *get()\
+    {\
+        return m_##Attr;\
+    }
+
 #endif /* g_singleton_h */
