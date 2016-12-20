@@ -11,7 +11,7 @@
 
 #include <iostream>
 
-#include "g_singleton.h"
+#include "common_def.h"
 
 class CacheApi
 {

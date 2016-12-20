@@ -1,13 +1,13 @@
 //
-//  g_singleton.h
+//  common_def.h
 //  awesomecode
 //
-//  Created by heyong on 2016/12/10.
+//  Created by heyong on 2016/12/20.
 //  Copyright © 2016年 heyong. All rights reserved.
 //
 
-#ifndef g_singleton_h
-#define g_singleton_h
+#ifndef common_def_h
+#define common_def_h
 
 #define DECLARE_SINGLETON(CLASS)\
 public:\
@@ -30,18 +30,19 @@ private:\
         return m_pInstance;\
     }
 
+
 ///
-#define DECL_MEMB(Type, Attr)\
+#define DECL_SIMP_FIELD(Type, Attr)\
 public:\
     Type *m_##Attr;\
 public:\
-    void *set()\
+    void set_##Attr(const Type& value)\
     {\
-        m_##Attr = Attr;\
+        m_##Attr = value;\
     }\
-    Type *get()\
+    const Type& get() const\
     {\
         return m_##Attr;\
     }
 
-#endif /* g_singleton_h */
+#endif /* common_def_h */
