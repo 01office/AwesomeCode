@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C06BD7E1E0A0B6700D360F8 /* bit_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C06BD7C1E0A0B6700D360F8 /* bit_map.cpp */; };
 		3C3F404D1D5B879C00D9E8B4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F404C1D5B879C00D9E8B4 /* main.cpp */; };
 		3C7357E81D8BF1B800361AE1 /* huffman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7357E61D8BF1B800361AE1 /* huffman.cpp */; };
 		3C9B70711D75CE6700E4450B /* my_algor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9B706F1D75CE6700E4450B /* my_algor.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C06BD7C1E0A0B6700D360F8 /* bit_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bit_map.cpp; sourceTree = "<group>"; };
+		3C06BD7D1E0A0B6700D360F8 /* bit_map.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = bit_map.hpp; sourceTree = "<group>"; };
 		3C3AD3631E0980B500C72130 /* common_def.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common_def.h; sourceTree = "<group>"; };
 		3C3F40491D5B879C00D9E8B4 /* awesomecode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = awesomecode; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3F404C1D5B879C00D9E8B4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 				3CE5EA161DFC3A9600BA9EDA /* my_singleton.hpp */,
 				3C96D5E91E08279800884FC9 /* jd.h */,
 				3C3AD3631E0980B500C72130 /* common_def.h */,
+				3C06BD7C1E0A0B6700D360F8 /* bit_map.cpp */,
+				3C06BD7D1E0A0B6700D360F8 /* bit_map.hpp */,
 			);
 			path = awesomecode;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			files = (
 				3C3F404D1D5B879C00D9E8B4 /* main.cpp in Sources */,
 				3CE5EA171DFC3A9600BA9EDA /* my_singleton.cpp in Sources */,
+				3C06BD7E1E0A0B6700D360F8 /* bit_map.cpp in Sources */,
 				3C9B70711D75CE6700E4450B /* my_algor.cpp in Sources */,
 				3C7357E81D8BF1B800361AE1 /* huffman.cpp in Sources */,
 			);
