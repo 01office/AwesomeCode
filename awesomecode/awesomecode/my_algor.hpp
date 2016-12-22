@@ -196,4 +196,7 @@ char *my_strcpy(char *dest, const char *src);
 //    return a[i >> SHIFT] & (1 << (i & MASK));
 //}
 
+
+// Bloom Filter
+
 #endif /* my_algor_hpp */
