@@ -630,5 +630,8 @@ int main(int argc, const char * argv[]) {
     B b;
     b.doSth();
     
+    map<string, int> m;
+    m.insert(map<string, int>::value_type("he", 6));
+    
     return 0;
 }

@@ -14,6 +14,7 @@
 #include <ctime>
 #include <functional>
 #include <algorithm>
+#include <map>
 
 void manacher(std::string &str);
 
