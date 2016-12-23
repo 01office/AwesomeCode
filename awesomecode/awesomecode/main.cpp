@@ -632,6 +632,7 @@ int main(int argc, const char * argv[]) {
     
     map<string, int> m;
     m.insert(map<string, int>::value_type("he", 6));
+    m.insert(make_pair("yo", 7));
     
     return 0;
 }
