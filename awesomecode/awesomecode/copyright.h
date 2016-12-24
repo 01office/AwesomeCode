@@ -11,6 +11,7 @@
 
 /*
  * Copyright (c) 2016, Neo He <neohe2007 at gmail dot com>
+ * All rights reserved
  */
 
 #endif /* copyright_h */
