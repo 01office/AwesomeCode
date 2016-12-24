@@ -37,6 +37,7 @@
 		3C96D5E91E08279800884FC9 /* jd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jd.h; sourceTree = "<group>"; };
 		3C9B706F1D75CE6700E4450B /* my_algor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = my_algor.cpp; sourceTree = "<group>"; };
 		3C9B70701D75CE6700E4450B /* my_algor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = my_algor.hpp; sourceTree = "<group>"; };
+		3CC4BB8F1E0EA47B00A40079 /* copyright.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = copyright.h; sourceTree = "<group>"; };
 		3CE5EA151DFC3A9600BA9EDA /* my_singleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = my_singleton.cpp; sourceTree = "<group>"; };
 		3CE5EA161DFC3A9600BA9EDA /* my_singleton.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = my_singleton.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +83,7 @@
 				3C3AD3631E0980B500C72130 /* common_def.h */,
 				3C06BD7C1E0A0B6700D360F8 /* bit_map.cpp */,
 				3C06BD7D1E0A0B6700D360F8 /* bit_map.hpp */,
+				3CC4BB8F1E0EA47B00A40079 /* copyright.h */,
 			);
 			path = awesomecode;
 			sourceTree = "<group>";
