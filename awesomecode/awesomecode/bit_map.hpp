@@ -23,4 +23,17 @@ void clr_num(int n);
 
 int test_num(int n);
 
+class Base
+{
+public:
+    virtual void getout();
+};
+
+class Derived : public Base
+{
+public:
+    virtual void getout();
+    virtual void hello();
+};
+
 #endif /* bit_map_hpp */

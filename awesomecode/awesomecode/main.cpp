@@ -16,6 +16,7 @@
 #include "my_algor.hpp"
 #include "my_singleton.hpp"
 #include "jd.h"
+#include "bit_map.hpp"
 
 using namespace std;
 
@@ -633,6 +634,9 @@ int main(int argc, const char * argv[]) {
     map<string, int> m;
     m.insert(map<string, int>::value_type("he", 6));
     m.insert(make_pair("yo", 7));
+    
+    Base *base = new Derived;
+    base->getout();
     
     return 0;
 }

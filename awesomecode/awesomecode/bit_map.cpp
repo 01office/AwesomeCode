@@ -27,3 +27,17 @@ int test_num(int n)
     return bitarray[n >> SHIFT] & (1 << (n & MASK));
 }
 
+void Base::getout()
+{
+    std::cout << "Base getout" << std::endl;
+}
+
+void Derived::getout()
+{
+    std::cout << "Derived getout" << std::endl;
+}
+
+void Derived::hello()
+{
+    std::cout << "World" << std::endl;
+}
