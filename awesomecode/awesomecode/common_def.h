@@ -45,4 +45,19 @@ public:\
         return m_##Attr;\
     }
 
+
+inline bool compare1(int a, int b)
+{
+    return a > b;
+}
+
+class compare2
+{
+public:
+    bool operator()(int a, int b) const
+    {
+        return a < b;
+    }
+};
+
 #endif /* common_def_h */
