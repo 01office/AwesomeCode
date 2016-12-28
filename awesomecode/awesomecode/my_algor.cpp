@@ -338,11 +338,12 @@ bool Solution::is_valid(const std::string &s)
 
 void get_str_from_timestamp(time_t iTimeStamp, char *pTime)
 {
-    struct tm *pTmp = gmtime(&iTimeStamp);
+    struct tm *pTmp = gmtime(&iTimeStamp);  // not thread safe
     if (pTmp == NULL) {
         return;
     }
     
+    // not thread safe
     sprintf(pTime, "%04d-%02d-%02d %02d:%02d", pTmp->tm_year + 1900, pTmp->tm_mon + 1, pTmp->tm_mday, pTmp->tm_hour, pTmp->tm_min);
 }
 
