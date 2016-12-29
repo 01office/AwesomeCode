@@ -197,6 +197,7 @@ char *my_strcpy(char *dest, const char *src);
 //    return a[i >> SHIFT] & (1 << (i & MASK));
 //}
 
+int b_search(int a[], int n, int v);
 
 // Bloom Filter
 
