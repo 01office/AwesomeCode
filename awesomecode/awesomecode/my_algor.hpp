@@ -15,6 +15,7 @@
 #include <functional>
 #include <algorithm>
 #include <map>
+#include <memory>   // auto_ptr
 
 void manacher(std::string &str);
 
