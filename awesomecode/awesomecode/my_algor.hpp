@@ -202,4 +202,14 @@ int b_search(int a[], int n, int v);
 
 // Bloom Filter
 
+// test auto_ptr
+class AA
+{
+public:
+    void show()
+    {
+        std::cout << "AA's show" << std::endl;
+    }
+};
+
 #endif /* my_algor_hpp */

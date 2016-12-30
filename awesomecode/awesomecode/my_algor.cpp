@@ -1056,6 +1056,3 @@ int b_search(int a[], int n, int v)
     
     return -1;
 }
-
-std::auto_ptr<int> aptr1(new int);
-std::auto_ptr<int> aptr2 = aptr1;   // transfer ownership

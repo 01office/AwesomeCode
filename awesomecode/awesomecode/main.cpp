@@ -638,5 +638,13 @@ int main(int argc, const char * argv[]) {
     Base *base = new Derived;
     base->getout();
     
+    std::auto_ptr<AA> paa1(new AA);
+    paa1->show();
+    cout << paa1.get() << endl;     // address
+    std::auto_ptr<AA> paa2 = paa1;
+    paa2->show();
+    cout << paa1.get() << endl;     // 0x0
+    cout << paa2.get() << endl;     // address
+    
     return 0;
 }
