@@ -212,4 +212,14 @@ public:
     }
 };
 
+// test unique_ptr
+class UA
+{
+public:
+    void show()
+    {
+        std::cout << "UA's show" << std::endl;
+    }
+};
+
 #endif /* my_algor_hpp */

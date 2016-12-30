@@ -646,5 +646,14 @@ int main(int argc, const char * argv[]) {
     cout << paa1.get() << endl;     // 0x0
     cout << paa2.get() << endl;     // address
     
+    std::unique_ptr<UA> pu1(new UA);
+    pu1->show();
+    cout << pu1.get() << endl;      // address
+    std::unique_ptr<UA> pu2 = std::move(pu1);   // transfer
+    pu1->show();
+    cout << pu1.get() << endl;      // 0x0
+    pu2->show();
+    cout << pu2.get() << endl;      // address
+    
     return 0;
 }
