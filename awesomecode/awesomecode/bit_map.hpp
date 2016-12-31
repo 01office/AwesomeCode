@@ -13,10 +13,6 @@
 
 #include "common_def.h"
 
-#define SHIFT 5
-#define BITSPERNUM 32
-#define MASK 0x1F
-
 void set_num(int n);
 
 void clr_num(int n);

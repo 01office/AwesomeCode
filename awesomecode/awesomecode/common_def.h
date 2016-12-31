@@ -46,6 +46,10 @@ public:\
     }
 
 
+#define SHIFT 5
+#define BITSPERNUM 32
+#define MASK 0x1F
+
 inline bool compare1(int a, int b)
 {
     return a > b;
