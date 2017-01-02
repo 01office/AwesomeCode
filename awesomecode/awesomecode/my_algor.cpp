@@ -1040,9 +1040,9 @@ char *my_strcpy(char *dest, const char *src)
 
 int b_search(int a[], int n, int v)
 {
-    int left = 0, right = n - 1;
+    int left = 0, right = n - 1, middle;
     while (left <= right) {
-        int middle = left + ((right - left) >> 1);
+        middle = left + ((right - left) >> 1);
         if (v == a[middle]) {
             return middle;
         }
