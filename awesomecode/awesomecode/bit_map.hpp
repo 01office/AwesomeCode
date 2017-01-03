@@ -32,4 +32,6 @@ public:
     virtual void hello();
 };
 
+int count_one(int n);
+
 #endif /* bit_map_hpp */
