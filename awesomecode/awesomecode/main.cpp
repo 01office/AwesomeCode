@@ -359,25 +359,31 @@ int count_one_2(int N)  // 利用统计的方法
     return count;
 }
 
-/**
-  * 快速排序
-  */
+/*
+ * 快速排序
+ */
 void quick_sort(int arr[], int l, int r)
 {
-    if (l < r) {
+    if (l < r)
+    {
         int i = l, j = r, tmp = arr[l];
-        while (i < j) {
-            while (i < j && arr[j] >= tmp) {
+        while (i < j)
+        {
+            while (i < j && arr[j] >= tmp)
+            {
                 --j;
             }
-            if (i < j) {
+            if (i < j)
+            {
                 arr[i++] = arr[j];
             }
             
-            while (i < j && arr[i] < tmp) {
+            while (i < j && arr[i] < tmp)
+            {
                 ++i;
             }
-            if (i < j) {
+            if (i < j)
+            {
                 arr[j--] = arr[i];
             }
         }
